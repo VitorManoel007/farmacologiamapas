@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/button";
-
 const guaranteeItems = [
   "Garantia total de 7 dias",
   "Reembolso simples",
@@ -37,13 +35,6 @@ export const GuaranteeSection = (): JSX.Element => {
             </div>
           ))}
         </div>
-        <Button
-          type="button"
-          data-testid="button-guarantee-cta"
-          className="mt-6 h-auto min-h-[52px] w-full rounded-[13px] bg-[#00ff48] px-6 py-3 [font-family:'Poppins',Helvetica] text-base font-bold leading-snug tracking-[0] text-white hover:bg-[#00e643]"
-        >
-          GARANTIR MEU ACESSO AGORA
-        </Button>
       </div>
     </section>
   );
