@@ -1,0 +1,133 @@
+Você é um especialista em UI mobile e landing pages de alta conversão.
+
+Preciso transformar o bloco dos materiais/mockups da minha landing page em um CARROSSEL HORIZONTAL MODERNO utilizando as imagens anexadas pelo usuário.
+
+IMPORTANTE:
+Usar as imagens anexadas como cards reais do carrossel.
+
+NÃO alterar:
+- identidade visual
+- design atual
+- cores
+- estilo dos blocos
+- estrutura da página
+- estética clean já existente.
+
+OBJETIVO:
+Criar um carrossel horizontal arrastável no celular para mostrar os materiais de forma mais moderna, organizada e interativa.
+
+==================================================
+FUNCIONAMENTO DO CARROSSEL
+==================================================
+
+1. O usuário deve conseguir:
+- arrastar para o lado no celular
+- deslizar suavemente com o dedo
+- visualizar vários materiais.
+
+2. O carrossel deve possuir:
+- scroll horizontal suave
+- snap entre os cards
+- movimento natural
+- excelente fluidez mobile.
+
+3. NÃO usar:
+- autoplay
+- rotação automática
+- efeitos exagerados
+- transições pesadas.
+
+==================================================
+ESTRUTURA DOS CARDS
+==================================================
+
+Cada card deve conter:
+- a imagem/mockup anexada
+- nome do material
+- pequena descrição opcional
+- aparência clean.
+
+IMPORTANTE:
+As imagens devem ficar:
+- grandes
+- bem visíveis
+- centralizadas
+- sem cortes
+- sem deformação.
+
+==================================================
+VISUAL MOBILE
+==================================================
+
+NO CELULAR:
+
+Mostrar:
+- 1 card principal
+- parte do próximo card aparecendo na lateral.
+
+OBJETIVO:
+Incentivar o usuário a arrastar para o lado.
+
+IMPORTANTE:
+O carrossel deve parecer:
+- moderno
+- fluido
+- estilo App Store/Netflix
+- premium clean.
+
+==================================================
+VISUAL DESKTOP
+==================================================
+
+NO DESKTOP:
+- manter visual elegante
+- permitir visualizar mais cards
+- sem quebrar proporções.
+
+==================================================
+DESIGN
+==================================================
+
+Manter EXATAMENTE:
+- mesmo estilo da landing page
+- mesmas bordas arredondadas
+- mesma identidade visual
+- mesmo padrão clean.
+
+Adicionar:
+- sombras suaves
+- leve profundidade
+- espaçamento confortável
+- ótima responsividade.
+
+==================================================
+IMPORTANTE
+==================================================
+
+1. O sistema deve permitir:
+- adicionar novos cards facilmente
+- trocar imagens rapidamente
+- duplicar materiais sem quebrar layout.
+
+2. Garantir:
+- carregamento leve
+- performance mobile
+- nenhuma quebra visual
+- nenhum overflow bugado
+- responsividade perfeita.
+
+3. NÃO alterar:
+- hero
+- ofertas
+- FAQ
+- outros blocos da página.
+
+==================================================
+OBJETIVO FINAL
+==================================================
+
+Transformar o bloco dos materiais em uma experiência moderna e interativa, aumentando:
+- percepção de valor
+- organização visual
+- sensação de muitos conteúdos
+- experiência mobile.
