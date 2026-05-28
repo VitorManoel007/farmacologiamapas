@@ -7,7 +7,7 @@ import { MaterialPreviewSection } from "./sections/MaterialPreviewSection";
 
 export const Lp = (): JSX.Element => {
   return (
-    <main className="flex w-full min-w-[402px] flex-col overflow-hidden bg-[#101720]">
+    <main className="flex w-full flex-col overflow-x-hidden bg-[#101720]">
       <HeroPromoSection />
       <MaterialPreviewSection />
       <DeliverablesGridSection />

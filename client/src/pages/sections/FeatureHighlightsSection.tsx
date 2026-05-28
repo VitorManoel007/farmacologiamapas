@@ -15,11 +15,11 @@ const highlightItems = [
 
 export const FeatureHighlightsSection = (): JSX.Element => {
   return (
-    <section className="mt-14 w-full px-5">
-      <div className="mx-auto flex w-full max-w-[364px] flex-col gap-0">
+    <section className="mt-10 w-full px-4">
+      <div className="mx-auto flex w-full max-w-sm flex-col gap-0">
         <header className="flex flex-col">
-          <div className="flex min-h-[55px] items-center justify-center rounded-[3px] bg-[#00ff2e] px-4 py-[3px]">
-            <h2 className="[font-family:'Poppins',Helvetica] text-center text-xl font-bold leading-[15.4px] tracking-[0.60px] text-white">
+          <div className="flex min-h-[56px] items-center justify-center rounded-[3px] bg-[#00ff2e] px-4 py-2">
+            <h2 className="[font-family:'Poppins',Helvetica] text-center text-lg font-bold leading-6 tracking-[0.60px] text-white">
               VOCÊ VAI RECEBER AO ADQUIRIR
               <br />O PRODUTO
             </h2>
@@ -32,32 +32,32 @@ export const FeatureHighlightsSection = (): JSX.Element => {
         </header>
         <Card className="mt-[-10px] overflow-hidden rounded-md border-0 bg-white shadow-none">
           <CardContent className="p-0">
-            <div className="flex flex-col items-center px-[5px] pb-4 pt-[19px]">
+            <div className="flex flex-col items-center px-3 pb-5 pt-5">
               <div className="flex w-full flex-col items-center">
-                <div className="flex h-[30px] w-[188px] items-center justify-center rounded-[2.95px] bg-[#00ff2e]">
-                  <span className="[font-family:'Poppins',Helvetica] text-center text-[19.7px] font-bold leading-[15.1px] tracking-[0.59px] text-white">
+                <div className="flex h-8 w-full max-w-[200px] items-center justify-center rounded-[2.95px] bg-[#00ff2e]">
+                  <span className="[font-family:'Poppins',Helvetica] text-center text-[19px] font-bold leading-[15.1px] tracking-[0.59px] text-white">
                     ITEM 01
                   </span>
                 </div>
-                <p className="mt-[3px] w-[291px] [font-family:'Poppins',Helvetica] text-center text-[17px] font-medium leading-[19.6px] tracking-[0.51px] text-black">
+                <p className="mt-2 w-full text-center [font-family:'Poppins',Helvetica] text-base font-medium leading-6 tracking-[0.51px] text-black">
                   117 paginas dos principais fármacos explicados de forma
                   objetiva
                 </p>
               </div>
-              <Separator className="mt-[18px] h-px w-full bg-black" />
-              <ul className="mt-[10px] flex w-full list-none flex-col p-0">
+              <Separator className="mt-4 h-px w-full bg-black" />
+              <ul className="mt-3 flex w-full list-none flex-col p-0">
                 {highlightItems.map((item, index) => (
                   <li key={item} className="flex flex-col">
-                    <div className="flex min-h-[34px] items-start gap-3 px-3">
+                    <div className="flex min-h-[40px] items-center gap-3 px-2 py-1">
                       <img
-                        className="mt-0 h-[30px] w-[30px] shrink-0 object-cover"
+                        className="h-7 w-7 shrink-0 object-cover"
                         alt="Istockphoto"
                         src="/figmaAssets/istockphoto-691856234-612x612-photoroom-2.png"
                       />
                       <span
                         className={`[font-family:'Poppins',Helvetica] ${
                           index === 0 ? "text-center" : "text-left"
-                        } mt-[9px] block w-[268px] text-[9.1px] font-medium leading-[10.5px] tracking-[0.27px] text-[#019a01]`}
+                        } flex-1 text-sm font-medium leading-5 tracking-[0.27px] text-[#019a01]`}
                       >
                         {item}
                       </span>
@@ -66,7 +66,7 @@ export const FeatureHighlightsSection = (): JSX.Element => {
                   </li>
                 ))}
               </ul>
-              <p className="mt-[14px] w-[283px] [font-family:'Poppins',Helvetica] text-center text-lg font-medium leading-[20.7px] tracking-[0.54px] text-black">
+              <p className="mt-4 w-full text-center [font-family:'Poppins',Helvetica] text-lg font-medium leading-6 tracking-[0.54px] text-black">
                 e muito mais...
               </p>
             </div>

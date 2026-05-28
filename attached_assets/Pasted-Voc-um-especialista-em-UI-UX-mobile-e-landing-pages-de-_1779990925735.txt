@@ -1,0 +1,110 @@
+Você é um especialista em UI/UX mobile e landing pages de alta conversão.
+
+Preciso que otimize TODAS as proporções MOBILE da minha landing page sem alterar:
+- estrutura dos blocos
+- identidade visual
+- design
+- cores
+- copy
+- layout desktop.
+
+OBJETIVO:
+Deixar a página:
+- extremamente confortável no celular
+- mais profissional
+- mais fluida
+- mais organizada
+- mais moderna
+- com aparência nativa mobile.
+
+FOCO TOTAL:
+Responsividade mobile.
+
+AJUSTES NECESSÁRIOS:
+
+1. Ajustar container principal:
+- largura máxima ideal para celulares modernos
+- centralização perfeita
+- evitar aparência “desktop espremido”.
+
+2. Ajustar paddings laterais:
+- melhorar respiração visual
+- evitar elementos colados nas bordas.
+
+3. Ajustar espaçamento vertical:
+- reduzir excesso de altura entre blocos
+- melhorar ritmo de scroll
+- deixar a página mais fluida.
+
+4. Ajustar HERO SECTION:
+- melhor distribuição vertical
+- mockup maior
+- headline mais forte visualmente
+- CTA mais próximo do conteúdo principal.
+
+5. Ajustar HEADLINES:
+- tamanho ideal para mobile
+- line-height mais confortável
+- evitar quebras feias.
+
+6. Ajustar SUBTÍTULOS:
+- melhorar leitura
+- evitar textos muito largos.
+
+7. Ajustar MOCKUPS:
+- mockup principal maior no celular
+- centralização perfeita
+- sem cortes
+- sem distorção.
+
+8. Ajustar BOTÕES:
+- área de toque confortável
+- largura ideal
+- altura ideal para mobile
+- aparência moderna.
+
+9. Ajustar CARDS:
+- evitar elementos espremidos
+- melhorar respiro interno
+- melhorar alinhamento.
+
+10. Ajustar GRID:
+- transformar em 1 coluna no mobile quando necessário
+- evitar mini cards ilegíveis.
+
+11. Ajustar imagens:
+- responsivas
+- sem overflow
+- sem deformação
+- carregamento leve.
+
+12. Garantir:
+- nenhum scroll horizontal
+- nenhuma quebra visual
+- nenhuma sobreposição
+- nenhuma imagem cortada.
+
+13. Melhorar:
+- velocidade visual
+- escaneabilidade
+- conforto de leitura
+- experiência mobile.
+
+14. IMPORTANTE:
+NÃO alterar:
+- estrutura dos blocos
+- ordem da página
+- cores
+- identidade visual
+- layout desktop
+- estilo do design.
+
+Somente:
+- proporções
+- espaçamentos
+- responsividade
+- conforto mobile
+- fluidez visual.
+
+RESULTADO ESPERADO:
+Landing page com aparência extremamente profissional no celular, mais fluida, moderna e otimizada para conversão mobile.

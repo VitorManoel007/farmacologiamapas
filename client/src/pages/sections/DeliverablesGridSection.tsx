@@ -13,15 +13,15 @@ const deliverablesContent = {
 
 export const DeliverablesGridSection = (): JSX.Element => {
   return (
-    <section className="mt-[9px] w-full px-0">
+    <section className="mt-3 w-full px-0">
       <Card className="w-full border-0 bg-[#ff0000] shadow-none rounded-none">
-        <CardContent className="flex min-h-[209px] flex-col items-center justify-center px-4 py-[30px]">
-          <header className="max-w-[364px] text-center">
-            <h2 className="[font-family:'Poppins',Helvetica] text-xl font-bold tracking-[0.60px] text-white">
+        <CardContent className="flex min-h-[200px] flex-col items-center justify-center px-5 py-8">
+          <header className="w-full text-center">
+            <h2 className="[font-family:'Poppins',Helvetica] text-xl font-bold tracking-[0.60px] text-white leading-7">
               {deliverablesContent.titleLines.map((line, index) => (
                 <span
                   key={`deliverables-line-${index}`}
-                  className="block leading-[15.4px]"
+                  className="block"
                 >
                   {line}
                 </span>
@@ -30,9 +30,10 @@ export const DeliverablesGridSection = (): JSX.Element => {
           </header>
           <Button
             type="button"
-            className="mt-[26px] h-auto min-h-[38px] rounded-[7.33px] bg-[#00ff2e] px-8 py-[10px] [font-family:'Poppins',Helvetica] text-[15.1px] font-semibold tracking-[0.45px] text-white hover:bg-[#00ff2e]/90"
+            data-testid="button-deliverables-cta"
+            className="mt-6 h-auto min-h-[48px] w-full max-w-[220px] rounded-[7.33px] bg-[#00ff2e] px-8 py-3 [font-family:'Poppins',Helvetica] text-base font-semibold tracking-[0.45px] text-white hover:bg-[#00ff2e]/90"
           >
-            <span className="block leading-[11.6px]">
+            <span className="block leading-snug">
               {deliverablesContent.ctaLabel}
             </span>
           </Button>

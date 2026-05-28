@@ -5,16 +5,11 @@ const bonusCards = [
     badge: "#1-BÔNUS HOJE!",
     image:
       "/figmaAssets/magnific--criar-um-mockup-moderno-e-altamente-chamativo-para--81.png",
-    imageWrapperClassName: "pt-[5px]",
-    imageBackdropClassName: "mt-[5px]",
-    imageClassName: "ml-[-7px] mt-[-3px] h-[154px] w-[154px]",
     title: "CONCEITOS BÁSICOS DE FARMACOLOGIA",
     category: "MAPA MENTAL",
     description: (
       <>
-        Entenda todos os conceitos
-        <br />
-        básicos de farmacologia por um mapa mental pratico e rápido.
+        Entenda todos os conceitos básicos de farmacologia por um mapa mental pratico e rápido.
       </>
     ),
   },
@@ -22,16 +17,11 @@ const bonusCards = [
     badge: "#2-BÔNUS HOJE!",
     image:
       "/figmaAssets/magnific--criar-um-mockup-moderno-e-altamente-chamativo-para--81-1.png",
-    imageWrapperClassName: "pt-px",
-    imageBackdropClassName: "mt-[9px]",
-    imageClassName: "ml-[-7px] mt-[-3px] h-[154px] w-[154px]",
     title: "FÁRMACOS DE EMERGÊNCIA E URGÊNCIA",
     category: "MAPA MENTAL",
     description: (
       <>
-        Aprenda de tudo sobre fármacos que são utilizados
-        <br />
-        para salvar vidas, um material intuitivo e visual
+        Aprenda de tudo sobre fármacos que são utilizados para salvar vidas, um material intuitivo e visual
       </>
     ),
   },
@@ -39,15 +29,11 @@ const bonusCards = [
     badge: "#4-BÔNUS HOJE!",
     image:
       "/figmaAssets/magnific--criar-um-mockup-moderno-e-altamente-chamativo-para--81-2.png",
-    imageWrapperClassName: "pt-px",
-    imageBackdropClassName: "mt-[9px]",
-    imageClassName: "ml-[-7px] mt-[-3px] h-[154px] w-[154px]",
     title: "+ 75 PAGINAS DE CASOS CLÍNICOS DE FARMACOLOGIA",
     category: "MAPA MENTAL",
     description: (
       <>
-        Anotações de casos reais de <br />
-        farmacologia, estude com quem já passou pela situação.
+        Anotações de casos reais de farmacologia, estude com quem já passou pela situação.
       </>
     ),
   },
@@ -55,15 +41,11 @@ const bonusCards = [
     badge: "#4-BÔNUS HOJE!",
     image:
       "/figmaAssets/magnific--criar-um-mockup-moderno-e-altamente-chamativo-para--81-3.png",
-    imageWrapperClassName: "pt-px",
-    imageBackdropClassName: "mt-[9px]",
-    imageClassName: "ml-[-7px] mt-[-3px] h-[154px] w-[154px]",
     title: "FÁRMACOS MICROBIANOS COMPLETOS",
     category: "MAPA MENTAL",
     description: (
       <>
-        Aprenda tudo das contraindicações, efeitos adversos,&nbsp;&nbsp;dose,
-        indicações e muito mais dos fármacos microbianos de forma lúdica.
+        Aprenda tudo das contraindicações, efeitos adversos, dose, indicações e muito mais dos fármacos microbianos de forma lúdica.
       </>
     ),
   },
@@ -71,21 +53,11 @@ const bonusCards = [
     badge: "#5-BÔNUS HOJE!",
     image:
       "/figmaAssets/magnific--criar-um-mockup-moderno-e-altamente-chamativo-para--81-4.png",
-    imageWrapperClassName: "pt-0",
-    imageBackdropClassName: "mt-[9px]",
-    imageClassName: "ml-[-7px] mt-[-3px] h-[154px] w-[154px]",
-    title: (
-      <>
-        PSICOFÁRMACOS <br />
-        CONCEITOS
-      </>
-    ),
+    title: "PSICOFÁRMACOS CONCEITOS",
     category: "MAPA MENTAL",
     description: (
       <>
-        Recebe todo o conhecimento dos psicofármacos em um material detalhado e{" "}
-        <br />
-        fácil de entender.
+        Recebe todo o conhecimento dos psicofármacos em um material detalhado e fácil de entender.
       </>
     ),
   },
@@ -93,15 +65,11 @@ const bonusCards = [
     badge: "#6-BÔNUS HOJE!",
     image:
       "/figmaAssets/magnific--criar-um-mockup-moderno-e-altamente-chamativo-para--81-5.png",
-    imageWrapperClassName: "pt-1",
-    imageBackdropClassName: "mt-[5px]",
-    imageClassName: "ml-[-3px] mt-[-3px] h-36 w-36",
     title: "FÁRMACOS SISTEMA NERVOSO E PSICOFÁRMACO",
     category: "MAPA MENTAL",
     description: (
       <>
-        Aprenda tudo das contraindicações, efeitos adversos,&nbsp;&nbsp;dose,
-        indicações e muito mais dos psicofármacos de forma lúdica.
+        Aprenda tudo das contraindicações, efeitos adversos, dose, indicações e muito mais dos psicofármacos de forma lúdica.
       </>
     ),
   },
@@ -109,59 +77,55 @@ const bonusCards = [
 
 export const BasicPlanSection = (): JSX.Element => {
   return (
-    <section className="mt-[36.5px] w-full px-[6px]">
-      <div className="mx-auto flex w-full max-w-[383px] flex-col items-center">
-        <header className="mb-[13px] flex w-full max-w-[371px] flex-col items-center text-center">
-          <h2 className="[font-family:'Poppins',Helvetica] text-[17.2px] font-medium leading-[19.8px] tracking-[0.52px] text-white">
+    <section className="mt-8 w-full px-4">
+      <div className="mx-auto flex w-full max-w-lg flex-col items-center">
+        <header className="mb-4 flex w-full flex-col items-center text-center">
+          <h2 className="[font-family:'Poppins',Helvetica] text-lg font-medium leading-6 tracking-[0.52px] text-white">
             E NÃO PARA POR AÍ...
           </h2>
-          <p className="mt-[6px] [font-family:'Poppins',Helvetica] text-[17.2px] font-medium leading-[19.8px] tracking-[0.52px] text-white">
+          <p className="mt-1 [font-family:'Poppins',Helvetica] text-lg font-medium leading-6 tracking-[0.52px] text-white">
             TEM MAIS!
           </p>
-          <p className="mt-[6px] [font-family:'Poppins',Helvetica] text-[15.3px] font-medium leading-[17.6px] tracking-[0.46px] text-[#00ff2e]">
+          <p className="mt-1 [font-family:'Poppins',Helvetica] text-base font-medium leading-6 tracking-[0.46px] text-[#00ff2e]">
             Você vai receber...
           </p>
-          <div className="mt-[8px] w-full rounded-[2.86px] bg-[#00ff2e] py-[2px]">
-            <p className="[font-family:'Poppins',Helvetica] text-[17.2px] font-medium leading-[19.8px] tracking-[0.52px] text-white">
+          <div className="mt-2 w-full rounded-[2.86px] bg-[#00ff2e] py-1.5">
+            <p className="[font-family:'Poppins',Helvetica] text-lg font-medium leading-6 tracking-[0.52px] text-white">
               6 bônus exclusivos
             </p>
           </div>
         </header>
-        <div className="grid w-full grid-cols-2 gap-x-[11px] gap-y-[12px]">
+        <div className="grid w-full grid-cols-2 gap-3">
           {bonusCards.map((card, index) => (
             <Card
               key={`${card.badge}-${index}`}
-              className="rounded-[16.17px] border-0 bg-white shadow-none"
+              data-testid={`card-bonus-${index}`}
+              className="rounded-2xl border-0 bg-white shadow-none"
             >
-              <CardContent className="flex h-full min-h-[311px] flex-col items-center px-5 pb-5 pt-px">
-                <div
-                  className={`relative flex h-[141px] w-[141px] justify-center overflow-visible ${card.imageWrapperClassName}`}
-                >
-                  <div
-                    className={`h-[121px] w-[141px] rounded-[10.39px] bg-[#111820] ${card.imageBackdropClassName}`}
-                  />
+              <CardContent className="flex h-full flex-col items-center px-3 pb-4 pt-3">
+                <div className="relative flex w-full justify-center overflow-hidden rounded-xl bg-[#111820]" style={{ aspectRatio: "1 / 1" }}>
                   <img
-                    className={`absolute left-1/2 top-0 -translate-x-1/2 rounded-[17.32px] object-cover ${card.imageClassName}`}
+                    className="h-full w-full rounded-xl object-cover"
                     alt="Magnific criar um"
                     src={card.image}
                   />
                 </div>
-                <div className="mt-px flex h-[22px] w-[148px] items-start justify-center">
-                  <div className="mt-px flex h-[15px] w-[146px] items-center justify-center rounded-[3.46px] bg-[#00ff2e]">
-                    <span className="[font-family:'Poppins',Helvetica] text-center text-[11.2px] font-medium leading-[12.9px] tracking-[0.34px] text-white">
+                <div className="mt-2 flex w-full items-center justify-center">
+                  <div className="flex h-[18px] w-full items-center justify-center rounded-[3.46px] bg-[#00ff2e]">
+                    <span className="[font-family:'Poppins',Helvetica] text-center text-[10px] font-medium leading-tight tracking-[0.34px] text-white">
                       {card.badge}
                     </span>
                   </div>
                 </div>
-                <div className="mt-[-1px] flex w-full flex-1 flex-col items-center text-center">
-                  <h3 className="min-h-[26px] max-w-[173px] [font-family:'Poppins',Helvetica] text-[11.2px] font-medium leading-[12.9px] tracking-[0.34px] text-black">
+                <div className="mt-1 flex w-full flex-1 flex-col items-center text-center">
+                  <h3 className="w-full [font-family:'Poppins',Helvetica] text-[11px] font-semibold leading-[13px] tracking-[0.34px] text-black">
                     {card.title}
                   </h3>
-                  <p className="mt-[2px] max-w-[131px] [font-family:'Playpen_Sans_Deva',Helvetica] text-[11.2px] font-medium leading-[12.9px] tracking-[0.34px] text-[#019a01]">
+                  <p className="mt-1 [font-family:'Playpen_Sans_Deva',Helvetica] text-[11px] font-medium leading-[13px] tracking-[0.34px] text-[#019a01]">
                     {card.category}
                   </p>
-                  <div className="mt-[2px] h-px w-full bg-[#000000b2]" />
-                  <p className="mt-3 max-w-[187px] [font-family:'Poppins',Helvetica] text-[11.5px] font-normal leading-[13.3px] tracking-[0.35px] text-black">
+                  <div className="mt-1 h-px w-full bg-[#000000b2]" />
+                  <p className="mt-2 w-full [font-family:'Poppins',Helvetica] text-[10.5px] font-normal leading-[13px] tracking-[0.35px] text-black">
                     {card.description}
                   </p>
                 </div>
