@@ -55,9 +55,7 @@ export const FeatureHighlightsSection = (): JSX.Element => {
                         src="/figmaAssets/istockphoto-691856234-612x612-photoroom-2.png"
                       />
                       <span
-                        className={`[font-family:'Poppins',Helvetica] ${
-                          index === 0 ? "text-center" : "text-left"
-                        } flex-1 text-sm font-medium leading-5 tracking-[0.27px] text-[#019a01]`}
+                        className="[font-family:'Poppins',Helvetica] text-left flex-1 text-sm font-medium leading-5 tracking-[0.27px] text-[#019a01]"
                       >
                         {item}
                       </span>
