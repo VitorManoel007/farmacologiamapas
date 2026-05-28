@@ -14,8 +14,8 @@ export const Lp = (): JSX.Element => {
       <HeroPromoSection />
       <MaterialPreviewSection />
       <DeliverablesGridSection />
-      <FeatureHighlightsSection />
       <IdealForYouSection />
+      <FeatureHighlightsSection />
       <BasicPlanSection />
       <CompletePlanSection />
       <FaqSection />
