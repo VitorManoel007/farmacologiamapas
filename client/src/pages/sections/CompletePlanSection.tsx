@@ -38,7 +38,7 @@ const paymentLogos = [
 
 export const CompletePlanSection = (): JSX.Element => {
   return (
-    <section className="relative mt-10 flex w-full justify-center px-4 pb-6">
+    <section id="oferta" className="relative mt-10 flex w-full justify-center px-4 pb-6">
       <div className="flex w-full max-w-lg flex-col gap-4">
         <Card className="rounded-2xl border-0 bg-white shadow-none">
           <CardContent className="flex flex-col items-center px-5 pb-10 pt-5">

@@ -47,6 +47,7 @@ export const HeroPromoSection = (): JSX.Element => {
             type="button"
             data-testid="button-hero-cta"
             className="mt-6 h-auto min-h-[52px] w-full max-w-xs rounded-[13px] bg-[#00ff48] px-6 py-3 [font-family:'Inter',Helvetica] text-center text-lg font-bold leading-[normal] tracking-[0] text-white hover:bg-[#00e643]"
+            onClick={() => document.getElementById("oferta")?.scrollIntoView({ behavior: "smooth" })}
           >
             QUERO ADQUIRIR O MEU
           </Button>

@@ -32,6 +32,7 @@ export const DeliverablesGridSection = (): JSX.Element => {
             type="button"
             data-testid="button-deliverables-cta"
             className="mt-6 h-auto min-h-[48px] w-full max-w-[220px] rounded-[7.33px] bg-[#00ff2e] px-8 py-3 [font-family:'Poppins',Helvetica] text-base font-semibold tracking-[0.45px] text-white hover:bg-[#00ff2e]/90"
+            onClick={() => document.getElementById("oferta")?.scrollIntoView({ behavior: "smooth" })}
           >
             <span className="block leading-snug">
               {deliverablesContent.ctaLabel}
