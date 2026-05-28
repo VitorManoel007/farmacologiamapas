@@ -154,18 +154,18 @@ export const CompletePlanSection = (): JSX.Element => {
                 ou até 5x de R$ 5,18
               </p>
               <Separator className="mt-6 w-full bg-[#d9d9d9b2]" />
-              <div className="mt-5 flex w-full items-center justify-start pl-8">
+            </div>
+            <div className="mt-4 flex w-full flex-col items-center">
+              <div className="flex items-center gap-2">
                 <img
                   className="h-6 w-6 object-cover"
                   alt="Istockphoto"
                   src="/figmaAssets/istockphoto-691856234-612x612-photoroom-2.png"
                 />
+                <p className="[font-family:'Poppins',Helvetica] text-center text-base font-semibold leading-snug tracking-[0.5px] text-[#524949]">
+                  Você vai economizar R$171,10
+                </p>
               </div>
-            </div>
-            <div className="mt-4 flex w-full flex-col items-center">
-              <p className="[font-family:'Poppins',Helvetica] text-center text-base font-semibold leading-snug tracking-[0.5px] text-[#524949]">
-                Você vai economizar R$171,10
-              </p>
               <Button
                 type="button"
                 data-testid="button-complete-plan-cta"
