@@ -178,22 +178,19 @@ export const CompletePlanSection = (): JSX.Element => {
               <p className="mt-4 [font-family:'Poppins',Helvetica] text-center text-base font-semibold leading-snug tracking-[0.5px] text-[#524949]">
                 Compre agora mesmo!
               </p>
+              <div className="mt-6 flex w-full items-end justify-around gap-3">
+                {paymentLogos.map((logo, index) => (
+                  <img
+                    key={`payment-logo-${index}`}
+                    className={logo.className}
+                    alt={logo.alt}
+                    src={logo.src}
+                  />
+                ))}
+              </div>
             </div>
           </CardContent>
         </Card>
-
-        <footer className="flex justify-center pt-2 pb-2">
-          <div className="flex w-full items-end justify-around gap-3">
-            {paymentLogos.map((logo, index) => (
-              <img
-                key={`payment-logo-${index}`}
-                className={logo.className}
-                alt={logo.alt}
-                src={logo.src}
-              />
-            ))}
-          </div>
-        </footer>
       </div>
     </section>
   );
