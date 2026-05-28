@@ -1,0 +1,168 @@
+Você é um especialista em landing pages mobile de alta conversão.
+
+Preciso que crie 3 NOVOS BLOCOS na minha landing page mantendo EXATAMENTE o mesmo estilo visual atual da página.
+
+IMPORTANTE:
+NÃO alterar:
+- identidade visual
+- cores
+- estrutura dos outros blocos
+- tipografia principal
+- layout existente
+- estilo dos botões
+- estética mobile.
+
+A página possui:
+- visual clean
+- fundo escuro
+- blocos simples
+- cards claros
+- verde vibrante nos CTAs
+- design direto e minimalista.
+
+==================================================
+POSICIONAMENTO DOS NOVOS BLOCOS
+==================================================
+
+1. O bloco:
+"IDEAL PARA VOCÊ QUE"
+deve ser inserido ENTRE o BLOCO 4 e BLOCO 5 da página atual.
+
+2. O FAQ deve ficar NO FINAL da página.
+
+3. O RODAPÉ deve ficar ABAIXO do FAQ no final absoluto da landing page.
+
+IMPORTANTE:
+Não alterar a ordem dos outros blocos já existentes.
+
+==================================================
+BLOCO 1 — IDEAL PARA VOCÊ QUE:
+==================================================
+
+Criar uma seção simples e moderna.
+
+ESTRUTURA:
+- título centralizado
+- lista de benefícios em cards ou linhas simples
+- ícones verdes minimalistas
+- visual clean
+- mesmo padrão visual da página atual.
+
+TÍTULO:
+IDEAL PARA VOCÊ QUE:
+
+ITENS:
+✔ Tem dificuldade para memorizar farmacologia  
+✔ Quer revisar mais rápido antes das provas  
+✔ Se perde em PDFs enormes e cansativos  
+✔ Quer estudar pelo celular de forma prática  
+✔ Busca mais clareza nos mecanismos de ação  
+✔ Precisa revisar medicamentos em minutos  
+✔ Quer estudar de forma mais visual e organizada  
+
+DESIGN:
+- seguir exatamente o padrão visual atual
+- bordas arredondadas
+- fundo claro dentro do bloco
+- espaçamento confortável
+- foco em leitura rápida mobile.
+
+==================================================
+BLOCO 2 — FAQ
+==================================================
+
+Criar seção de perguntas frequentes moderna e minimalista.
+
+ESTRUTURA:
+- acordeão simples
+- animação suave
+- visual leve
+- totalmente responsivo.
+
+TÍTULO:
+DÚVIDAS FREQUENTES
+
+PERGUNTAS:
+
+1. Quando recebo o material?
+Resposta:
+O acesso é enviado imediatamente no seu e-mail após a confirmação do pagamento.
+
+2. O material é físico?
+Resposta:
+Não. Todo o conteúdo é digital em PDF.
+
+3. Posso acessar pelo celular?
+Resposta:
+Sim. O material foi otimizado para celular, tablet e computador.
+
+4. O acesso expira?
+Resposta:
+Não. O acesso é vitalício.
+
+5. Serve para qual área?
+Resposta:
+Ideal para estudantes da área da saúde que estudam farmacologia.
+
+6. A compra é segura?
+Resposta:
+Sim. O pagamento é processado em ambiente totalmente seguro.
+
+DESIGN:
+- manter estilo clean da página
+- fundo claro nos itens
+- texto escuro
+- bordas suaves
+- excelente leitura no mobile.
+
+==================================================
+BLOCO 3 — RODAPÉ
+==================================================
+
+Criar um rodapé minimalista e profissional.
+
+ESTRUTURA:
+- centralizado
+- simples
+- elegante
+- sem exageros.
+
+CONTEÚDO:
+
+Farmacologia Mapas Mentais © 2026  
+Todos os direitos reservados.
+
+Links:
+- Termos de Uso
+- Política de Privacidade
+- Suporte
+
+Adicionar:
+- espaçamento confortável
+- visual discreto
+- tipografia menor
+- aparência profissional.
+
+==================================================
+REGRAS IMPORTANTES
+==================================================
+
+1. NÃO alterar:
+- hero
+- ofertas
+- mockups
+- blocos existentes
+- estrutura da página.
+
+2. NÃO mudar:
+- paleta de cores
+- identidade visual
+- estilo mobile atual.
+
+3. Garantir:
+- responsividade perfeita
+- ótimo visual no celular
+- carregamento leve
+- excelente espaçamento mobile.
+
+4. O design dos novos blocos deve parecer que já faziam parte da landing page desde o início.
