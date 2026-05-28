@@ -2,6 +2,7 @@ import { BasicPlanSection } from "./sections/BasicPlanSection";
 import { CompletePlanSection } from "./sections/CompletePlanSection";
 import { DeliverablesGridSection } from "./sections/DeliverablesGridSection";
 import { FaqSection } from "./sections/FaqSection";
+import { UrgencySection } from "./sections/UrgencySection";
 import { FeatureHighlightsSection } from "./sections/FeatureHighlightsSection";
 import { FooterSection } from "./sections/FooterSection";
 import { HeroPromoSection } from "./sections/HeroPromoSection";
@@ -14,6 +15,7 @@ export const Lp = (): JSX.Element => {
       <HeroPromoSection />
       <MaterialPreviewSection />
       <DeliverablesGridSection />
+      <UrgencySection />
       <FeatureHighlightsSection />
       <IdealForYouSection />
       <BasicPlanSection />
