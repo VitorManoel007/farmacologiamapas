@@ -4,7 +4,9 @@ import { DeliverablesGridSection } from "./sections/DeliverablesGridSection";
 import { FaqSection } from "./sections/FaqSection";
 import { FeatureHighlightsSection } from "./sections/FeatureHighlightsSection";
 import { FooterSection } from "./sections/FooterSection";
+import { GuaranteeSection } from "./sections/GuaranteeSection";
 import { HeroPromoSection } from "./sections/HeroPromoSection";
+import { HowToAccessSection } from "./sections/HowToAccessSection";
 import { IdealForYouSection } from "./sections/IdealForYouSection";
 import { MaterialPreviewSection } from "./sections/MaterialPreviewSection";
 
@@ -18,6 +20,8 @@ export const Lp = (): JSX.Element => {
       <FeatureHighlightsSection />
       <BasicPlanSection />
       <CompletePlanSection />
+      <HowToAccessSection />
+      <GuaranteeSection />
       <FaqSection />
       <FooterSection />
     </main>

@@ -1,0 +1,143 @@
+Você é um especialista em landing pages mobile de alta conversão.
+
+Preciso adicionar 2 NOVOS BLOCOS na minha landing page mantendo EXATAMENTE o mesmo design atual da página.
+
+IMPORTANTE:
+NÃO alterar:
+- identidade visual
+- estrutura atual
+- blocos existentes
+- cores
+- tipografia
+- layout desktop
+- estilo mobile
+- estilo clean da página.
+
+A página possui:
+- fundo escuro
+- blocos modernos
+- visual clean
+- verde vibrante nos CTAs
+- bordas arredondadas
+- design minimalista e mobile first.
+
+==================================================
+POSICIONAMENTO DOS NOVOS BLOCOS
+==================================================
+
+1. BLOCO:
+"COMO VOCÊ RECEBE O ACESSO"
+Deve ficar NO FINAL DA PÁGINA.
+
+2. BLOCO:
+"GARANTIA 7 DIAS"
+Deve ficar LOGO ABAIXO DO BLOCO:
+"COMO VOCÊ RECEBE O ACESSO"
+
+IMPORTANTE:
+Os dois blocos devem ficar:
+- antes do FAQ
+- acima do rodapé.
+
+Não alterar a ordem dos outros blocos existentes.
+
+==================================================
+BLOCO 1 — COMO VOCÊ RECEBE O ACESSO
+==================================================
+
+Criar um bloco visual simples e moderno explicando o processo após a compra.
+
+TÍTULO:
+COMO VOCÊ RECEBE O ACESSO
+
+SUBTÍTULO:
+Seu acesso é liberado imediatamente após a confirmação do pagamento.
+
+ESTRUTURA:
+Criar 3 passos visuais simples mantendo o MESMO estilo visual da landing page.
+
+PASSO 1:
+💳
+Efetue o pagamento de forma totalmente segura.
+
+PASSO 2:
+📩
+Receba imediatamente no seu Gmail o link de acesso ao material.
+
+PASSO 3:
+📚
+Abra o Drive e comece a estudar pelo celular, tablet ou computador.
+
+DESIGN:
+- seguir exatamente o padrão da landing page
+- visual clean
+- mesmo estilo dos outros cards
+- bordas arredondadas
+- excelente leitura mobile
+- espaçamento confortável
+- ícones modernos e discretos.
+
+==================================================
+BLOCO 2 — GARANTIA 7 DIAS
+==================================================
+
+Criar um bloco de garantia moderno seguindo EXATAMENTE o mesmo design da página.
+
+IMPORTANTE:
+Utilizar o selo de verificado/anexo enviado pelo usuário dentro do bloco de garantia.
+
+O selo deve:
+- ficar visível
+- transmitir segurança
+- integrar naturalmente ao design atual
+- sem exageros
+- aparência profissional.
+
+TÍTULO:
+TESTE POR 7 DIAS SEM RISCO
+
+SUBTÍTULO:
+Se o material não ajudar nos seus estudos, devolvemos 100% do seu dinheiro.
+
+ITENS:
+✔ Garantia total de 7 dias  
+✔ Reembolso simples  
+✔ Compra segura  
+✔ Sem burocracia  
+
+BOTÃO:
+GARANTIR MEU ACESSO AGORA
+
+DESIGN:
+- manter o mesmo estilo clean da página
+- visual moderno
+- fundo consistente com os outros blocos
+- excelente visual mobile
+- aparência profissional
+- sem parecer bloco separado do restante da página.
+
+==================================================
+REGRAS IMPORTANTES
+==================================================
+
+1. NÃO alterar:
+- hero
+- ofertas
+- mockups
+- blocos existentes
+- estrutura geral da página.
+
+2. NÃO mudar:
+- identidade visual
+- estilo dos botões
+- cores
+- design atual.
+
+3. Garantir:
+- excelente visual mobile
+- carregamento leve
+- responsividade perfeita
+- espaçamento confortável
+- fluidez visual.
+
+4. Os novos blocos devem parecer que já faziam parte da landing page desde o início.
