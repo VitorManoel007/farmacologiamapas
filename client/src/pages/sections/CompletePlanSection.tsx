@@ -77,9 +77,9 @@ export const CompletePlanSection = (): JSX.Element => {
             <Button
               type="button"
               data-testid="button-basic-plan-cta"
-              className="mt-7 h-auto min-h-[60px] w-full rounded-[10.74px] bg-[#019a01] px-5 py-3 hover:bg-[#018301]"
+              className="mt-7 h-auto min-h-[60px] w-full whitespace-normal rounded-[10.74px] bg-[#019a01] px-5 py-3 hover:bg-[#018301]"
             >
-              <span className="[font-family:'Poppins',Helvetica] text-center text-xl font-semibold leading-snug tracking-[0.67px] text-white">
+              <span className="w-full [font-family:'Poppins',Helvetica] text-center text-xl font-semibold leading-snug tracking-[0.67px] text-white">
                 Quero somente o básico
               </span>
             </Button>
@@ -169,9 +169,9 @@ export const CompletePlanSection = (): JSX.Element => {
               <Button
                 type="button"
                 data-testid="button-complete-plan-cta"
-                className="mt-8 h-auto min-h-[60px] w-full rounded-[10.74px] bg-[#019a01] px-5 py-3 hover:bg-[#018301]"
+                className="mt-8 h-auto min-h-[60px] w-full whitespace-normal rounded-[10.74px] bg-[#019a01] px-5 py-3 hover:bg-[#018301]"
               >
-                <span className="[font-family:'Poppins',Helvetica] text-center text-xl font-semibold leading-snug tracking-[0.67px] text-white">
+                <span className="w-full [font-family:'Poppins',Helvetica] text-center text-xl font-semibold leading-snug tracking-[0.67px] text-white">
                   Quero o Plano Completo
                 </span>
               </Button>
