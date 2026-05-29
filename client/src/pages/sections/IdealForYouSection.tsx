@@ -19,7 +19,7 @@ const items = [
   },
   {
     text: "Busca mais clareza nos mecanismos de ação",
-    image: null,
+    image: "/figmaAssets/ideal-mecanismos.png",
   },
   {
     text: "Precisa revisar medicamentos em minutos",
