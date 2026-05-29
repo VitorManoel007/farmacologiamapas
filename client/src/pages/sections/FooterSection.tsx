@@ -1,6 +1,6 @@
 export const FooterSection = (): JSX.Element => {
   return (
-    <footer className="mt-10 w-full border-t border-[#ffffff15] px-4 pb-8 pt-8">
+    <footer className="mt-10 w-full border-t border-[#ffffff15] px-4 pb-12 pt-8">
       <div className="mx-auto flex w-full max-w-sm flex-col items-center gap-4">
         <p className="[font-family:'Poppins',Helvetica] text-center text-sm font-semibold leading-snug tracking-[0.42px] text-white">
           Farmacologia Mapas Mentais © 2026

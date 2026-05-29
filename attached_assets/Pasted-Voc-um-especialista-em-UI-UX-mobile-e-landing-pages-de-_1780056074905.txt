@@ -1,0 +1,186 @@
+Você é um especialista em UI/UX mobile e landing pages de alta conversão.
+
+Preciso ajustar TODA a landing page para ficar PERFEITA no celular sem alterar:
+- design atual
+- identidade visual
+- estrutura dos blocos
+- cores
+- tipografia
+- estilo clean da página.
+
+OBJETIVO:
+Transformar a experiência mobile em algo:
+- fluido
+- confortável
+- moderno
+- extremamente responsivo
+- otimizado para conversão.
+
+==================================================
+REGRAS IMPORTANTES
+==================================================
+
+NÃO alterar:
+- ordem dos blocos
+- textos
+- mockups
+- estilo visual
+- identidade da página.
+
+NÃO recriar a landing page.
+NÃO mudar componentes desnecessariamente.
+
+Apenas:
+- ajustar proporções
+- responsividade
+- espaçamentos
+- tamanhos
+- alinhamentos
+- comportamento mobile.
+
+==================================================
+AJUSTES MOBILE NECESSÁRIOS
+==================================================
+
+1. ESPAÇAMENTO
+
+Ajustar:
+- padding lateral
+- espaçamento entre blocos
+- margens
+- distância entre títulos e textos.
+
+Objetivo:
+- evitar aparência apertada
+- melhorar leitura no celular.
+
+==================================================
+2. TIPOGRAFIA
+==================================================
+
+Ajustar:
+- títulos
+- subtítulos
+- listas
+- botões
+- FAQ
+- descrições.
+
+Garantir:
+- leitura confortável
+- sem textos gigantes
+- sem quebra estranha.
+
+IMPORTANTE:
+Usar escalas responsivas.
+
+==================================================
+3. MOCKUPS E IMAGENS
+==================================================
+
+Ajustar:
+- largura
+- altura
+- alinhamento
+- proporções.
+
+Garantir:
+- imagens grandes no mobile
+- sem cortes
+- sem overflow
+- sem elementos saindo da tela.
+
+==================================================
+4. BOTÕES
+==================================================
+
+Garantir:
+- largura confortável
+- altura ideal para toque
+- excelente visual mobile
+- espaçamento correto.
+
+IMPORTANTE:
+Botões devem parecer premium e fáceis de clicar.
+
+==================================================
+5. CARDS E BLOCOS
+==================================================
+
+Ajustar:
+- bordas
+- padding interno
+- alinhamento
+- organização visual.
+
+Garantir:
+- aparência clean
+- leitura rápida
+- ótima escaneabilidade.
+
+==================================================
+6. CARROSSEL DOS MATERIAIS
+==================================================
+
+Garantir:
+- swipe perfeito no celular
+- snap suave
+- scroll fluido
+- parte do próximo card aparecendo.
+
+Corrigir:
+- bugs de largura
+- overflow horizontal
+- cards cortados.
+
+==================================================
+7. HERO SECTION
+==================================================
+
+Ajustar:
+- headline
+- subtítulo
+- mockup principal
+- CTA principal.
+
+Objetivo:
+- primeira dobra extremamente forte no celular.
+
+==================================================
+8. PERFORMANCE MOBILE
+==================================================
+
+Garantir:
+- carregamento leve
+- imagens otimizadas
+- nenhuma animação pesada
+- excelente fluidez.
+
+==================================================
+9. RESPONSIVIDADE
+==================================================
+
+Validar:
+- iPhone
+- Android
+- telas pequenas
+- telas médias
+- tablets.
+
+Corrigir:
+- qualquer quebra visual
+- desalinhamentos
+- elementos apertados.
+
+==================================================
+10. RESULTADO FINAL
+==================================================
+
+A landing page deve parecer:
+- profissional
+- moderna
+- premium clean
+- feita primeiro para celular.
+
+IMPORTANTE:
+A experiência mobile deve ficar MUITO melhor sem alterar a identidade visual atual da página.

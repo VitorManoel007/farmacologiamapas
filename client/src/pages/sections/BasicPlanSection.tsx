@@ -102,7 +102,7 @@ export const BasicPlanSection = (): JSX.Element => {
               data-testid={`card-bonus-${index}`}
               className="rounded-2xl border-0 bg-white shadow-none"
             >
-              <CardContent className="flex h-full flex-col items-center px-3 pb-4 pt-3">
+              <CardContent className="flex h-full flex-col items-center px-2 pb-4 pt-3">
                 <div className="relative flex w-full justify-center overflow-hidden rounded-xl bg-[#111820]" style={{ aspectRatio: "1 / 1" }}>
                   <img
                     className="h-full w-full rounded-xl object-cover"
@@ -111,21 +111,21 @@ export const BasicPlanSection = (): JSX.Element => {
                   />
                 </div>
                 <div className="mt-2 flex w-full items-center justify-center">
-                  <div className="flex h-[18px] w-full items-center justify-center rounded-[3.46px] bg-[#00ff2e]">
-                    <span className="[font-family:'Poppins',Helvetica] text-center text-[10px] font-medium leading-tight tracking-[0.34px] text-white">
+                  <div className="flex min-h-[20px] w-full items-center justify-center rounded-[3.46px] bg-[#00ff2e] px-1 py-0.5">
+                    <span className="[font-family:'Poppins',Helvetica] text-center text-[9px] font-medium leading-tight tracking-[0.28px] text-white">
                       {card.badge}
                     </span>
                   </div>
                 </div>
-                <div className="mt-1 flex w-full flex-1 flex-col items-center text-center">
-                  <h3 className="w-full [font-family:'Poppins',Helvetica] text-[11px] font-semibold leading-[13px] tracking-[0.34px] text-black">
+                <div className="mt-1.5 flex w-full flex-1 flex-col items-center text-center">
+                  <h3 className="w-full [font-family:'Poppins',Helvetica] text-[11px] font-semibold leading-[14px] tracking-[0.3px] text-black">
                     {card.title}
                   </h3>
-                  <p className="mt-1 [font-family:'Playpen_Sans_Deva',Helvetica] text-[11px] font-medium leading-[13px] tracking-[0.34px] text-[#019a01]">
+                  <p className="mt-1 [font-family:'Poppins',Helvetica] text-[10px] font-semibold leading-[13px] tracking-[0.3px] text-[#019a01]">
                     {card.category}
                   </p>
-                  <div className="mt-1 h-px w-full bg-[#000000b2]" />
-                  <p className="mt-2 w-full [font-family:'Poppins',Helvetica] text-[10.5px] font-normal leading-[13px] tracking-[0.35px] text-black">
+                  <div className="mt-1.5 h-px w-full bg-[#000000b2]" />
+                  <p className="mt-1.5 w-full [font-family:'Poppins',Helvetica] text-[10px] font-normal leading-[13px] tracking-[0.3px] text-black">
                     {card.description}
                   </p>
                 </div>

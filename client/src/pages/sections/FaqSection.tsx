@@ -68,8 +68,8 @@ export const FaqSection = (): JSX.Element => {
                   />
                 </button>
                 <div
-                  className={`overflow-hidden transition-all duration-200 ${
-                    openIndex === index ? "max-h-40 pb-4" : "max-h-0"
+                  className={`overflow-hidden transition-all duration-300 ${
+                    openIndex === index ? "max-h-60 pb-4" : "max-h-0"
                   }`}
                 >
                   <p className="[font-family:'Poppins',Helvetica] text-sm font-normal leading-5 tracking-[0.42px] text-[#524949]">
@@ -83,7 +83,7 @@ export const FaqSection = (): JSX.Element => {
         <Button
           type="button"
           data-testid="button-faq-cta"
-          className="mt-5 h-auto min-h-[52px] w-full rounded-[13px] bg-[#00ff48] px-6 py-3 [font-family:'Poppins',Helvetica] text-base font-bold leading-snug tracking-[0] text-white hover:bg-[#00e643]"
+          className="mt-5 h-auto min-h-[56px] w-full rounded-[13px] bg-[#00ff48] px-6 py-4 [font-family:'Poppins',Helvetica] text-base font-bold leading-snug tracking-[0] text-white hover:bg-[#00e643]"
           onClick={() => document.getElementById("oferta")?.scrollIntoView({ behavior: "smooth" })}
         >
           GARANTIR MEU ACESSO AGORA
