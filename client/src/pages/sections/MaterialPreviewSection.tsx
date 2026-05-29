@@ -37,7 +37,7 @@ export const MaterialPreviewSection = (): JSX.Element => {
         ))}
       </div>
       <p className="mt-7 w-full text-center [font-family:'Poppins',Helvetica] text-base font-medium leading-6 tracking-[0.48px] text-white">
-        Nosso mapas mentais vão fazer você decorar até duas 2x mais rápido de forma simples e pratico.
+        Nossos mapas mentais vão fazer você decorar até duas 2x mais rápido de forma simples e prático.
       </p>
     </section>
   );

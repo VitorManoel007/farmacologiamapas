@@ -10,7 +10,7 @@ const headingParts = {
 };
 
 const descriptionParts = {
-  text: "Mapas mentais detalhados e faceeis de entender: cada medicamento explicados em mais de 110 paginas de forma clara e com ilustrações, sem  textos longos, para você entender cada componente de imediato.",
+  text: "Mapas mentais detalhados e fáceis de entender: cada medicamento explicados em mais de 110 páginas de forma clara e com ilustrações, sem textos longos, para você entender cada componente de imediato.",
   price: "por apenas 15,90",
 };
 

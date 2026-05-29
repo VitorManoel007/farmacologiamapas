@@ -9,7 +9,7 @@ const bonusCards = [
     category: "MAPA MENTAL",
     description: (
       <>
-        Entenda todos os conceitos básicos de farmacologia por um mapa mental pratico e rápido.
+        Entenda todos os conceitos básicos de farmacologia por um mapa mental prático e rápido.
       </>
     ),
   },
@@ -29,7 +29,7 @@ const bonusCards = [
     badge: "#4-BÔNUS HOJE!",
     image:
       "/figmaAssets/magnific--criar-um-mockup-moderno-e-altamente-chamativo-para--81-2.png",
-    title: "+ 75 PAGINAS DE CASOS CLÍNICOS DE FARMACOLOGIA",
+    title: "+ 75 PÁGINAS DE CASOS CLÍNICOS DE FARMACOLOGIA",
     category: "MAPA MENTAL",
     description: (
       <>
@@ -57,7 +57,7 @@ const bonusCards = [
     category: "MAPA MENTAL",
     description: (
       <>
-        Recebe todo o conhecimento dos psicofármacos em um material detalhado e fácil de entender.
+        Receba todo o conhecimento dos psicofármacos em um material detalhado e fácil de entender.
       </>
     ),
   },

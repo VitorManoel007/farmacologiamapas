@@ -2,11 +2,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
 const highlightItems = [
-  "117 Paginas De Fármacos Explicados De Forma Objetiva",
+  "117 Páginas De Fármacos Explicados De Forma Objetiva",
   "Efeitos Adversos De Cada Fármaco;",
-  "Farmacocinética De Cada Fármaco ;",
+  "Farmacocinética De Cada Fármaco;",
   "Dose Correta De Cada Fármaco;",
-  "Contradições De Cada Fármaco;",
+  "Contraindicações De Cada Fármaco;",
   "Interações De Cada Fármaco;",
   "Nome Comercial De Cada Fármaco;",
   "Composição De Cada Fármaco;",
@@ -40,7 +40,7 @@ export const FeatureHighlightsSection = (): JSX.Element => {
                   </span>
                 </div>
                 <p className="mt-2 w-full text-center [font-family:'Poppins',Helvetica] text-base font-medium leading-6 tracking-[0.51px] text-black">
-                  117 paginas dos principais fármacos explicados de forma
+                  117 páginas dos principais fármacos explicados de forma
                   objetiva
                 </p>
               </div>

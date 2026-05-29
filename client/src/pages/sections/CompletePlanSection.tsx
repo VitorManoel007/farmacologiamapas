@@ -3,14 +3,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
 const basicPlanFeatures = [
-  "117 Paginas De Fármacos Explicados De Forma Objetiva(pdf)",
+  "117 Páginas De Fármacos Explicados De Forma Objetiva (PDF)",
 ];
 
 const completePlanFeatures = [
-  "117 Paginas Dos Principais Fármacos",
+  "117 Páginas Dos Principais Fármacos",
   "Conceitos Básicos De Farmacologia",
   "Fármacos De Emergência E Urgência",
-  "+ 75 Paginas De Casos Clínicos De Farmacologia",
+  "+ 75 Páginas De Casos Clínicos De Farmacologia",
   "Fármacos Microbianos Completos",
   "Psicofármacos Conceitos",
   "Fármacos Sistema Nervoso E Psicofármaco",

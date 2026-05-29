@@ -5,8 +5,8 @@ const deliverablesContent = {
   titleLines: [
     "Acesso ainda hoje, você vai",
     "entender tudo sobre farmacologia",
-    "usando nosso mapas mentais.",
-    "chega de duvidas!",
+    "usando nossos mapas mentais.",
+    "Chega de dúvidas!",
   ],
   ctaLabel: "Compra agora!",
 };
