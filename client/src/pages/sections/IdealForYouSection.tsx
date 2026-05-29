@@ -7,7 +7,7 @@ const items = [
   },
   {
     text: "Quer revisar mais rápido antes das provas",
-    image: null,
+    image: "/figmaAssets/ideal-revisar.png",
   },
   {
     text: "Se perde em PDFs enormes e cansativos",
@@ -45,25 +45,20 @@ export const IdealForYouSection = (): JSX.Element => {
             {items.map((item, index) => (
               <div
                 key={index}
-                className="flex flex-col border-b border-[#e5e5e5] last:border-0"
+                className="flex items-center gap-3 border-b border-[#e5e5e5] py-3 last:border-0"
               >
-                <div className="flex items-start gap-3 py-3">
-                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#00ff2e] text-white text-xs font-bold">
-                    ✓
-                  </span>
-                  <span className="[font-family:'Poppins',Helvetica] text-sm font-medium leading-5 tracking-[0.42px] text-black">
-                    {item.text}
-                  </span>
-                </div>
-                {item.image && (
-                  <div className="flex justify-center pb-3">
-                    <img
-                      src={item.image}
-                      alt={item.text}
-                      className="w-full max-w-[280px] h-auto object-contain"
-                    />
-                  </div>
+                {item.image ? (
+                  <img
+                    src={item.image}
+                    alt={item.text}
+                    className="h-14 w-14 shrink-0 object-contain"
+                  />
+                ) : (
+                  <div className="h-14 w-14 shrink-0" />
                 )}
+                <span className="[font-family:'Poppins',Helvetica] text-sm font-medium leading-5 tracking-[0.42px] text-black">
+                  {item.text}
+                </span>
               </div>
             ))}
           </CardContent>
