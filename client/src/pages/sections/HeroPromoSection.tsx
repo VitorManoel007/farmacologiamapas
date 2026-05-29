@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
+import ChatGPT_Image_29_de_mai__de_2026__07_53_38 from "@assets/ChatGPT_Image_29_de_mai._de_2026,_07_53_38.png";
+
 const headingParts = {
   prefix: "Mais de",
   highlighted: "110 mapas mentais",
@@ -33,7 +35,7 @@ export const HeroPromoSection = (): JSX.Element => {
             <img
               className="h-auto w-full max-w-full object-contain"
               alt="Ilustração promocional sobre farmacologia"
-              src="/figmaAssets/magnific-quero-que-mude-o-tema-que-2989263901-1.png"
+              src={ChatGPT_Image_29_de_mai__de_2026__07_53_38}
             />
           </figure>
           <p className="mt-6 w-full text-center [font-family:'Inter',Helvetica] text-base font-normal leading-6 tracking-[0] text-white">
