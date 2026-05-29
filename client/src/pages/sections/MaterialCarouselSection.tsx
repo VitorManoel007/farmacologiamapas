@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useCallback } from "react";
 
 const carouselItems = [
   { image: "/figmaAssets/sample-domperidona.png", name: "Domperidona" },
@@ -12,6 +12,14 @@ export const MaterialCarouselSection = (): JSX.Element => {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
+  const [progress, setProgress] = useState(0);
+
+  const updateProgress = useCallback(() => {
+    const el = trackRef.current;
+    if (!el) return;
+    const max = el.scrollWidth - el.clientWidth;
+    setProgress(max > 0 ? el.scrollLeft / max : 0);
+  }, []);
 
   const onMouseDown = (e: React.MouseEvent) => {
     const el = trackRef.current;
@@ -31,6 +39,7 @@ export const MaterialCarouselSection = (): JSX.Element => {
     const x = e.pageX - el.offsetLeft;
     const walk = (x - startX) * 1.4;
     el.scrollLeft = scrollLeft - walk;
+    updateProgress();
   };
 
   const onMouseUp = () => {
@@ -48,6 +57,7 @@ export const MaterialCarouselSection = (): JSX.Element => {
           Veja o material que você vai receber na prática!
         </p>
       </div>
+
       <div
         ref={trackRef}
         className="flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 select-none"
@@ -61,6 +71,7 @@ export const MaterialCarouselSection = (): JSX.Element => {
         onMouseMove={onMouseMove}
         onMouseUp={onMouseUp}
         onMouseLeave={onMouseUp}
+        onScroll={updateProgress}
       >
         {carouselItems.map((item, index) => (
           <div
@@ -76,6 +87,13 @@ export const MaterialCarouselSection = (): JSX.Element => {
           </div>
         ))}
         <div className="w-2 shrink-0" />
+      </div>
+
+      <div className="mx-auto mt-1 mb-2 w-[70%] max-w-xs h-[4px] rounded-full bg-white/10">
+        <div
+          className="h-full rounded-full bg-[#00ff48] transition-all duration-75 ease-out"
+          style={{ width: `${Math.round(progress * 100)}%` }}
+        />
       </div>
     </section>
   );
