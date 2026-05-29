@@ -86,10 +86,10 @@ export const BasicPlanSection = (): JSX.Element => {
           <p className="mt-1 [font-family:'Poppins',Helvetica] text-lg font-medium leading-6 tracking-[0.52px] text-white">
             TEM MAIS!
           </p>
-          <p className="mt-1 [font-family:'Poppins',Helvetica] text-base font-medium leading-6 tracking-[0.46px] text-[#00ff2e]">
+          <p className="mt-1 [font-family:'Poppins',Helvetica] text-base font-medium leading-6 tracking-[0.46px] text-[#00ff48]">
             Você vai receber...
           </p>
-          <div className="mt-2 w-full rounded-[2.86px] bg-[#00ff2e] py-1.5">
+          <div className="mt-2 w-full rounded-[2.86px] bg-[#00ff48] py-1.5">
             <p className="[font-family:'Poppins',Helvetica] text-lg font-medium leading-6 tracking-[0.52px] text-white">
               6 bônus exclusivos
             </p>
@@ -111,7 +111,7 @@ export const BasicPlanSection = (): JSX.Element => {
                   />
                 </div>
                 <div className="mt-2 flex w-full items-center justify-center">
-                  <div className="flex min-h-[20px] w-full items-center justify-center rounded-[3.46px] bg-[#00ff2e] px-1 py-0.5">
+                  <div className="flex min-h-[20px] w-full items-center justify-center rounded-[3.46px] bg-[#00ff48] px-1 py-0.5">
                     <span className="[font-family:'Poppins',Helvetica] text-center text-[9px] font-medium leading-tight tracking-[0.28px] text-white">
                       {card.badge}
                     </span>

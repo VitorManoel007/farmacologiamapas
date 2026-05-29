@@ -33,7 +33,7 @@ export const UrgencySection = (): JSX.Element => {
         </p>
         <div className="flex items-center gap-3">
           <div className="flex flex-col items-center">
-            <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#00ff2e]">
+            <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#00ff48]">
               <span
                 data-testid="countdown-minutes"
                 className="[font-family:'Poppins',Helvetica] text-2xl font-black leading-none text-white"
@@ -49,7 +49,7 @@ export const UrgencySection = (): JSX.Element => {
             :
           </span>
           <div className="flex flex-col items-center">
-            <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#00ff2e]">
+            <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#00ff48]">
               <span
                 data-testid="countdown-seconds"
                 className="[font-family:'Poppins',Helvetica] text-2xl font-black leading-none text-white"

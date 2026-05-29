@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { usePixelTracking } from "@/hooks/use-pixel-tracking";
 
 const basicPlanFeatures = [
   "117 Páginas De Fármacos Explicados De Forma Objetiva (PDF)",
@@ -37,6 +38,15 @@ const paymentLogos = [
 ];
 
 export const CompletePlanSection = (): JSX.Element => {
+  const { trackInitiateCheckout } = usePixelTracking();
+
+  const handleBasicPlanClick = () => {
+    trackInitiateCheckout('basic');
+  };
+
+  const handleCompletePlanClick = () => {
+    trackInitiateCheckout('complete');
+  };
   return (
     <section id="oferta" className="relative mt-10 flex w-full justify-center px-4 pb-6">
       <div className="flex w-full max-w-lg flex-col gap-4">
@@ -74,15 +84,17 @@ export const CompletePlanSection = (): JSX.Element => {
                 ou até 3x de R$ 5,30
               </p>
             </div>
-            <Button
-              type="button"
-              data-testid="button-basic-plan-cta"
-              className="mt-7 h-auto min-h-[60px] w-full whitespace-normal rounded-[10.74px] bg-[#019a01] px-5 py-3 hover:bg-[#018301]"
+            <a
+              href="https://pay.cakto.com.br/p2cpxzq_905851"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={handleBasicPlanClick}
+              className="mt-7 flex h-auto min-h-[60px] w-full items-center justify-center whitespace-normal rounded-[10.74px] bg-[#019a01] px-5 py-3 hover:bg-[#018301] no-underline transition-colors"
             >
               <span className="w-full [font-family:'Poppins',Helvetica] text-center text-xl font-semibold leading-snug tracking-[0.67px] text-white">
                 Quero somente o básico
               </span>
-            </Button>
+            </a>
             <div className="mt-7 flex flex-col items-center">
               <p className="w-full text-center [font-family:'Poppins',Helvetica] text-sm font-semibold leading-5 tracking-[0.39px] text-[#ff0000]">
                 <span className="tracking-[0.05px]">
@@ -166,15 +178,17 @@ export const CompletePlanSection = (): JSX.Element => {
                   Você vai economizar R$171,10
                 </p>
               </div>
-              <Button
-                type="button"
-                data-testid="button-complete-plan-cta"
-                className="mt-8 h-auto min-h-[60px] w-full whitespace-normal rounded-[10.74px] bg-[#019a01] px-5 py-3 hover:bg-[#018301]"
+              <a
+                href="https://pay.cakto.com.br/f2aq3km_905864"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={handleCompletePlanClick}
+                className="mt-8 flex h-auto min-h-[60px] w-full items-center justify-center whitespace-normal rounded-[10.74px] bg-[#019a01] px-5 py-3 hover:bg-[#018301] no-underline transition-colors"
               >
                 <span className="w-full [font-family:'Poppins',Helvetica] text-center text-xl font-semibold leading-snug tracking-[0.67px] text-white">
                   Quero o Plano Completo
                 </span>
-              </Button>
+              </a>
               <p className="mt-4 [font-family:'Poppins',Helvetica] text-center text-base font-semibold leading-snug tracking-[0.5px] text-[#524949]">
                 Compre agora mesmo!
               </p>

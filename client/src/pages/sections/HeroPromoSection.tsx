@@ -27,8 +27,7 @@ export const HeroPromoSection = (): JSX.Element => {
             </span>
             <span className="font-medium">
               {" "}
-              para <br />
-              você decorar farmacologia
+              {headingParts.suffix}
             </span>
           </header>
           <figure className="mt-5 w-full">

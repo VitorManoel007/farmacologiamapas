@@ -10,8 +10,12 @@ import { HowToAccessSection } from "./sections/HowToAccessSection";
 import { IdealForYouSection } from "./sections/IdealForYouSection";
 import { MaterialCarouselSection } from "./sections/MaterialCarouselSection";
 import { MaterialPreviewSection } from "./sections/MaterialPreviewSection";
+import { usePixelTracking } from "@/hooks/use-pixel-tracking";
 
 export const Lp = (): JSX.Element => {
+  // Track PageView on route change
+  usePixelTracking();
+
   return (
     <main className="flex w-full flex-col overflow-x-hidden bg-[#101720]">
       <HeroPromoSection />

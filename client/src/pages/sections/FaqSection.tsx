@@ -44,7 +44,7 @@ export const FaqSection = (): JSX.Element => {
   return (
     <section className="mt-10 w-full px-4">
       <div className="mx-auto flex w-full max-w-sm flex-col items-center">
-        <div className="mb-4 flex w-full items-center justify-center rounded-[3px] bg-[#00ff2e] px-4 py-3">
+        <div className="mb-4 flex w-full items-center justify-center rounded-[3px] bg-[#00ff48] px-4 py-3">
           <h2 className="[font-family:'Poppins',Helvetica] text-center text-lg font-bold leading-6 tracking-[0.60px] text-white">
             DÚVIDAS FREQUENTES
           </h2>

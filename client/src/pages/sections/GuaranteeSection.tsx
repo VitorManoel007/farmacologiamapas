@@ -26,7 +26,7 @@ export const GuaranteeSection = (): JSX.Element => {
               key={index}
               className="flex items-center gap-3 border-b border-[#ffffff15] py-3 last:border-0"
             >
-              <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#00ff2e] text-white text-xs font-bold">
+              <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#00ff48] text-white text-xs font-bold">
                 ✓
               </span>
               <span className="[font-family:'Poppins',Helvetica] text-sm font-medium leading-5 tracking-[0.42px] text-white">

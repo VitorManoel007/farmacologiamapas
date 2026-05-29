@@ -22,7 +22,7 @@ export const HowToAccessSection = (): JSX.Element => {
   return (
     <section className="mt-10 w-full px-4">
       <div className="mx-auto flex w-full max-w-sm flex-col items-center">
-        <div className="mb-4 flex w-full items-center justify-center rounded-[3px] bg-[#00ff2e] px-4 py-3">
+        <div className="mb-4 flex w-full items-center justify-center rounded-[3px] bg-[#00ff48] px-4 py-3">
           <h2 className="[font-family:'Poppins',Helvetica] text-center text-lg font-bold leading-6 tracking-[0.60px] text-white">
             COMO VOCÊ RECEBE O ACESSO
           </h2>
@@ -48,10 +48,10 @@ export const HowToAccessSection = (): JSX.Element => {
                   </div>
                   <div className="flex flex-1 flex-col justify-center">
                     <div className="mb-1 flex items-center gap-2">
-                      <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#00ff2e] [font-family:'Poppins',Helvetica] text-[11px] font-bold text-white">
+                      <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#00ff48] [font-family:'Poppins',Helvetica] text-[11px] font-bold text-white">
                         {index + 1}
                       </span>
-                      <span className="[font-family:'Poppins',Helvetica] text-[11px] font-semibold uppercase tracking-[0.5px] text-[#00ff2e]">
+                      <span className="[font-family:'Poppins',Helvetica] text-[11px] font-semibold uppercase tracking-[0.5px] text-[#00ff48]">
                         Passo {index + 1}
                       </span>
                     </div>

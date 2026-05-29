@@ -18,7 +18,7 @@ export const FeatureHighlightsSection = (): JSX.Element => {
     <section className="mt-10 w-full px-4">
       <div className="mx-auto flex w-full max-w-sm flex-col gap-0">
         <header className="flex flex-col">
-          <div className="flex min-h-[56px] items-center justify-center rounded-[3px] bg-[#00ff2e] px-4 py-2">
+          <div className="flex min-h-[56px] items-center justify-center rounded-[3px] bg-[#00ff48] px-4 py-2">
             <h2 className="[font-family:'Poppins',Helvetica] text-center text-lg font-bold leading-6 tracking-[0.60px] text-white">
               VOCÊ VAI RECEBER AO ADQUIRIR
               <br />O PRODUTO
@@ -34,7 +34,7 @@ export const FeatureHighlightsSection = (): JSX.Element => {
           <CardContent className="p-0">
             <div className="flex flex-col items-center px-3 pb-5 pt-5">
               <div className="flex w-full flex-col items-center">
-                <div className="flex h-8 w-full max-w-[200px] items-center justify-center rounded-[2.95px] bg-[#00ff2e]">
+                <div className="flex h-8 w-full max-w-[200px] items-center justify-center rounded-[2.95px] bg-[#00ff48]">
                   <span className="[font-family:'Poppins',Helvetica] text-center text-[19px] font-bold leading-[15.1px] tracking-[0.59px] text-white">
                     ITEM 01
                   </span>
