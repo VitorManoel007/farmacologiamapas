@@ -7,8 +7,8 @@ const steps = [
     text: "Efetue o pagamento de forma totalmente segura.",
   },
   {
-    icon: "📩",
-    image: null,
+    icon: null,
+    image: "/figmaAssets/how-email.png",
     text: "Receba imediatamente no seu Gmail o link de acesso ao material.",
   },
   {
