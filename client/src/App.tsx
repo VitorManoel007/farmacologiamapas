@@ -4,7 +4,7 @@ import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import NotFound from "@/pages/not-found";
+// NotFound fallback removed per request — keep only the landing page and pixel
 import { metaPixel } from "@/lib/metaPixel";
 
 import { Lp } from "@/pages/Lp";
@@ -14,8 +14,7 @@ function Router() {
     <Switch>
       {/* Add pages below */}
       <Route path="/" component={Lp} />
-      {/* Fallback to 404 */}
-      <Route component={NotFound} />
+      {/* No 404 fallback — unrecognized routes render nothing (pixel still initialized) */}
     </Switch>
   );
 }
