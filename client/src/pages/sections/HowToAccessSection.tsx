@@ -1,19 +1,17 @@
 import { Card, CardContent } from "@/components/ui/card";
+import driveImg from "@assets/Untitled_Project-Photoroom_1780602284289.png";
 
 const steps = [
   {
-    icon: null,
     image: "/figmaAssets/how-pagamento.png",
     text: "Efetue o pagamento de forma totalmente segura.",
   },
   {
-    icon: null,
     image: "/figmaAssets/how-email.png",
     text: "Receba imediatamente no seu Gmail o link de acesso ao material.",
   },
   {
-    icon: "📚",
-    image: null,
+    image: driveImg,
     text: "Abra o Drive e comece a estudar pelo celular, tablet ou computador.",
   },
 ];
@@ -35,16 +33,12 @@ export const HowToAccessSection = (): JSX.Element => {
             <div className="flex flex-col gap-4">
               {steps.map((step, index) => (
                 <div key={index} className="flex items-start gap-4">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#111820] overflow-hidden text-2xl">
-                    {step.image ? (
-                      <img
-                        src={step.image}
-                        alt={`Passo ${index + 1}`}
-                        className="h-full w-full object-cover"
-                      />
-                    ) : (
-                      step.icon
-                    )}
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#111820] overflow-hidden">
+                    <img
+                      src={step.image}
+                      alt={`Passo ${index + 1}`}
+                      className="h-full w-full object-cover"
+                    />
                   </div>
                   <div className="flex flex-1 flex-col justify-center">
                     <div className="mb-1 flex items-center gap-2">
