@@ -10,6 +10,7 @@ import { HowToAccessSection } from "./sections/HowToAccessSection";
 import { IdealForYouSection } from "./sections/IdealForYouSection";
 import { MaterialCarouselSection } from "./sections/MaterialCarouselSection";
 import { PainIntensificationSection } from "./sections/PainIntensificationSection";
+import { PerceivedValueSection } from "./sections/PerceivedValueSection";
 import { MaterialPreviewSection } from "./sections/MaterialPreviewSection";
 import { usePixelTracking } from "@/hooks/use-pixel-tracking";
 
@@ -26,6 +27,7 @@ export const Lp = (): JSX.Element => {
       <IdealForYouSection />
       <PainIntensificationSection />
       <FeatureHighlightsSection />
+      <PerceivedValueSection />
       <BasicPlanSection />
       <CompletePlanSection />
       <HowToAccessSection />
