@@ -9,6 +9,7 @@ import { HeroPromoSection } from "./sections/HeroPromoSection";
 import { HowToAccessSection } from "./sections/HowToAccessSection";
 import { IdealForYouSection } from "./sections/IdealForYouSection";
 import { MaterialCarouselSection } from "./sections/MaterialCarouselSection";
+import { PainIntensificationSection } from "./sections/PainIntensificationSection";
 import { MaterialPreviewSection } from "./sections/MaterialPreviewSection";
 import { usePixelTracking } from "@/hooks/use-pixel-tracking";
 
@@ -23,6 +24,7 @@ export const Lp = (): JSX.Element => {
       <MaterialPreviewSection />
       <DeliverablesGridSection />
       <IdealForYouSection />
+      <PainIntensificationSection />
       <FeatureHighlightsSection />
       <BasicPlanSection />
       <CompletePlanSection />
