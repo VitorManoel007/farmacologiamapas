@@ -23,17 +23,17 @@ const paymentLogos = [
   {
     src: "/figmaAssets/pix-photoroom--1--1.png",
     alt: "Pix photoroom",
-    className: "h-16 w-auto object-contain",
+    className: "h-14 w-full object-contain",
   },
   {
     src: "/figmaAssets/visa-logo-11530966316amvzjrobsf-photoroom-1.png",
     alt: "Visa logo",
-    className: "h-16 w-auto object-contain",
+    className: "h-14 w-full object-contain",
   },
   {
     src: "/figmaAssets/r--1--photoroom-1.png",
     alt: "R photoroom",
-    className: "h-20 w-auto object-contain",
+    className: "h-16 w-full object-contain",
   },
 ];
 
@@ -192,14 +192,15 @@ export const CompletePlanSection = (): JSX.Element => {
               <p className="mt-4 [font-family:'Poppins',Helvetica] text-center text-base font-semibold leading-snug tracking-[0.5px] text-[#524949]">
                 Compre agora mesmo!
               </p>
-              <div className="mt-6 flex w-full items-end justify-around gap-3">
+              <div className="mt-6 flex w-full items-end justify-around gap-2">
                 {paymentLogos.map((logo, index) => (
-                  <img
-                    key={`payment-logo-${index}`}
-                    className={logo.className}
-                    alt={logo.alt}
-                    src={logo.src}
-                  />
+                  <div key={`payment-logo-${index}`} className="flex flex-1 items-end justify-center overflow-hidden">
+                    <img
+                      className={logo.className}
+                      alt={logo.alt}
+                      src={logo.src}
+                    />
+                  </div>
                 ))}
               </div>
             </div>
