@@ -208,17 +208,7 @@ class MetaPixelManager {
       return;
     }
 
-    try {
-      window.fbq('track', 'InitiateCheckout', {
-        content_name: `Plan: ${planType}`,
-        content_type: 'product',
-        value: planType === 'basic' ? 15.9 : 25.9,
-        currency: 'BRL',
-      });
-      console.log(`[Meta Pixel] InitiateCheckout tracked (${planType})`);
-    } catch (error) {
-      console.error('[Meta Pixel] InitiateCheckout error:', error);
-    }
+    return;
   }
 
   /**
