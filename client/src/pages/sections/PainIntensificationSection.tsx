@@ -1,5 +1,4 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 
 const painPoints = [
   "Esquecer medicamentos importantes",
@@ -45,14 +44,7 @@ export const PainIntensificationSection = (): JSX.Element => {
             </div>
           </CardContent>
         </Card>
-        <Button
-          type="button"
-          data-testid="button-pain-cta"
-          className="mt-6 h-auto min-h-[56px] w-full rounded-[7.33px] bg-[#00ff48] px-8 py-4 [font-family:'Poppins',Helvetica] text-lg font-semibold tracking-[0.45px] text-white hover:bg-[#00ff48]/90"
-          onClick={() => document.getElementById("oferta")?.scrollIntoView({ behavior: "smooth" })}
-        >
-          <span className="block leading-snug">Compra agora!</span>
-        </Button>
+
       </div>
     </section>
   );
