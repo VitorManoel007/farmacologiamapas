@@ -30,7 +30,7 @@ export const TestimonialsSection = (): JSX.Element => {
               >
                 <div
                   className="overflow-hidden rounded-2xl shadow-md"
-                  style={{ aspectRatio: "740/1352" }}
+                  style={{ aspectRatio: "500/900" }}
                 >
                   <img
                     src={t.img}
