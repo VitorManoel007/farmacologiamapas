@@ -28,13 +28,13 @@ export const TestimonialsSection = (): JSX.Element => {
                 key={t.name}
                 className="min-w-full flex-shrink-0"
               >
-                <div className="overflow-hidden rounded-2xl bg-white shadow-md">
+                <div className="overflow-hidden rounded-2xl shadow-md" style={{ background: "transparent" }}>
                   <img
                     src={t.img}
                     alt={`Depoimento de ${t.name}`}
                     className="h-auto object-contain"
                     draggable={false}
-                    style={{ maxWidth: "220px", borderRadius: "12px", display: "block", margin: "0 auto" }}
+                    style={{ maxWidth: "300px", borderRadius: "12px", display: "block", margin: "0 auto" }}
                   />
                 </div>
               </div>
