@@ -33,16 +33,13 @@ export const PerceivedValueSection = (): JSX.Element => {
               {valueItems.map((item, index) => (
                 <div
                   key={index}
-                  className="flex flex-col items-center justify-center gap-2 rounded-xl border border-[#e8e8e8] bg-[#f9f9f9] px-3 py-4"
+                  className="flex items-center justify-center rounded-xl border border-[#e8e8e8] bg-[#f9f9f9] p-2"
                 >
                   <img
                     src={item.img}
                     alt={item.label}
-                    className="h-20 w-20 object-contain"
+                    className="h-32 w-full object-contain"
                   />
-                  <span className="text-center [font-family:'Poppins',Helvetica] text-xs font-semibold leading-5 tracking-[0.36px] text-[#1a1a1a]">
-                    {item.label}
-                  </span>
                 </div>
               ))}
             </div>
