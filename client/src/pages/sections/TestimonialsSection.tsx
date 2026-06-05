@@ -27,6 +27,7 @@ export const TestimonialsSection = (): JSX.Element => {
               <div
                 key={t.name}
                 className="min-w-full flex-shrink-0"
+                style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}
               >
                 <div className="overflow-hidden rounded-2xl shadow-md" style={{ background: "transparent" }}>
                   <img
