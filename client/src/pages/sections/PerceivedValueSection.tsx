@@ -1,12 +1,18 @@
 import { Card, CardContent } from "@/components/ui/card";
+import imgFarmacologiaGeral from "@assets/flat_v2_farmacologia_geral_1780659442136.png";
+import imgPsicofarmacos from "@assets/flat_v2_psicofarmacos_1780659442136.png";
+import imgEmergencia from "@assets/flat_v2_emergencia_urgencia_1780659442136.png";
+import imgFarmacosMicrobianos from "@assets/flat_v2_farmacos_microbianos_1780659442135.png";
+import imgCasosClinicos from "@assets/flat_v2_casos_clinicos_1780659442135.png";
+import imgConceitosFundamentais from "@assets/flat_v2_conceitos_fundamentais_1780659442134.png";
 
 const valueItems = [
-  { emoji: "📚", label: "Farmacologia Geral" },
-  { emoji: "💊", label: "Psicofármacos" },
-  { emoji: "🚑", label: "Emergência e Urgência" },
-  { emoji: "🦠", label: "Fármacos Microbianos" },
-  { emoji: "📋", label: "Casos Clínicos" },
-  { emoji: "🧠", label: "Conceitos Fundamentais" },
+  { img: imgFarmacologiaGeral, label: "Farmacologia Geral" },
+  { img: imgPsicofarmacos, label: "Psicofármacos" },
+  { img: imgEmergencia, label: "Emergência e Urgência" },
+  { img: imgFarmacosMicrobianos, label: "Fármacos Microbianos" },
+  { img: imgCasosClinicos, label: "Casos Clínicos" },
+  { img: imgConceitosFundamentais, label: "Conceitos Fundamentais" },
 ];
 
 export const PerceivedValueSection = (): JSX.Element => {
@@ -29,7 +35,11 @@ export const PerceivedValueSection = (): JSX.Element => {
                   key={index}
                   className="flex flex-col items-center justify-center gap-2 rounded-xl border border-[#e8e8e8] bg-[#f9f9f9] px-3 py-4"
                 >
-                  <span className="text-3xl leading-none">{item.emoji}</span>
+                  <img
+                    src={item.img}
+                    alt={item.label}
+                    className="h-20 w-20 object-contain"
+                  />
                   <span className="text-center [font-family:'Poppins',Helvetica] text-xs font-semibold leading-5 tracking-[0.36px] text-[#1a1a1a]">
                     {item.label}
                   </span>
