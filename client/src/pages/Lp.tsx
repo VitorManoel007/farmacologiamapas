@@ -7,6 +7,7 @@ import { FooterSection } from "./sections/FooterSection";
 import { GuaranteeSection } from "./sections/GuaranteeSection";
 import { HeroPromoSection } from "./sections/HeroPromoSection";
 import { HowToAccessSection } from "./sections/HowToAccessSection";
+import { TestimonialsSection } from "./sections/TestimonialsSection";
 import { IdealForYouSection } from "./sections/IdealForYouSection";
 import { MaterialCarouselSection } from "./sections/MaterialCarouselSection";
 import { PainIntensificationSection } from "./sections/PainIntensificationSection";
@@ -34,6 +35,7 @@ export const Lp = (): JSX.Element => {
       <BasicPlanSection />
       <CompletePlanSection />
       <HowToAccessSection />
+      <TestimonialsSection />
       <GuaranteeSection />
       <TargetAudienceSection />
       <FaqSection />
