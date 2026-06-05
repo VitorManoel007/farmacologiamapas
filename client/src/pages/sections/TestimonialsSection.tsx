@@ -32,8 +32,9 @@ export const TestimonialsSection = (): JSX.Element => {
                   <img
                     src={t.img}
                     alt={`Depoimento de ${t.name}`}
-                    className="w-full h-auto object-contain"
+                    className="h-auto object-contain"
                     draggable={false}
+                    style={{ maxWidth: "220px", borderRadius: "12px", display: "block", margin: "0 auto" }}
                   />
                 </div>
               </div>
