@@ -26,13 +26,13 @@ export const TestimonialsSection = (): JSX.Element => {
             {testimonials.map((t) => (
               <div
                 key={t.name}
-                className="min-w-[80%] flex-shrink-0"
+                className="min-w-[88%] flex-shrink-0"
               >
                 <div className="overflow-hidden rounded-2xl shadow-md">
                   <img
                     src={t.img}
                     alt={`Depoimento de ${t.name}`}
-                    className="w-full object-cover"
+                    className="w-full h-auto object-contain"
                     draggable={false}
                   />
                 </div>
