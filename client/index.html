@@ -19,7 +19,120 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Geist:wght@100..900&family=Oxanium:wght@200..800&family=Architects+Daughter&family=Space+Grotesk:wght@300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Lexend:wght@100..900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Bitter:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Fira+Code:wght@300..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Geist+Mono:wght@100..900&family=Inconsolata:wght@200..900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <style>
 @import url("https://fonts.googleapis.com/css?family=Inter:400,700|Poppins:900,400,500,700,600|Playpen+Sans+Deva:500");
-    </style></head>
+    </style>
+    <script
+      src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+      data-utmify-prevent-xcod-sck
+      data-utmify-prevent-subids
+      async
+      defer
+    ></script>
+    <!-- UTMify pixel bootstrap: carrega pixel.js de forma segura e rastreia PageView no onload -->
+    <script>
+      (function(){
+        try {
+          if (!document.head) return;
+          window.pixelId = "6a269b721892220b96e9724b"; // UTMify pixel ID
+
+          if (!document.getElementById('utmify-pixel-script')) {
+            var s = document.createElement('script');
+            s.id = 'utmify-pixel-script';
+            s.async = true;
+            s.defer = true;
+            s.src = 'https://cdn.utmify.com.br/scripts/pixel/pixel.js';
+            s.onload = function(){
+              try {
+                if (!window.__pvTracked) {
+                  if (window.utmify && typeof window.utmify.track === 'function') {
+                    window.utmify.track('PageView', {});
+                    window.__pvTracked = true;
+                    console.info('[UTMify] PageView tracked');
+                  } else if (window.pixel && typeof window.pixel.track === 'function') {
+                    window.pixel.track('PageView', {});
+                    window.__pvTracked = true;
+                    console.info('[UTMify.pixel] PageView tracked');
+                  }
+                }
+              } catch(e) { console.error('[UTMify] track onload error', e); }
+            };
+            s.onerror = function(){ console.warn('[UTMify] falha ao carregar pixel.js'); };
+            document.head.appendChild(s);
+          }
+        } catch (e) { console.error('[UTMify] init error', e); }
+      })();
+    </script>
+
+    <!-- Meta / Facebook Pixel (assíncrono, fila) - substituído com ID legado -->
+    <script>
+      (function(f,b,e,v,n,t,s){
+        try {
+          if (window.fbq) { console.info('[Meta Pixel] fbq presente'); return; }
+          n = f.fbq = function(){ n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments); };
+          if (!f._fbq) f._fbq = n;
+          n.push = n; n.loaded = true; n.version = '2.0'; n.queue = [];
+          n.callMethod = function(){ n.queue.push(Array.prototype.slice.call(arguments)); };
+          t = b.createElement(e); t.async = true; t.defer = true; t.src = v; t.id = 'facebook-jssdk';
+          t.onload = function(){
+            try {
+              if (!window.__fbInitialized) {
+                fbq('init', '1383313273845160'); // ID legado
+                if (!window.__pvTracked) { fbq('track', 'PageView'); window.__pvTracked = true; }
+                window.__fbInitialized = true;
+                console.info('[Meta Pixel] inicializado');
+              }
+            } catch(err){ console.error('[Meta Pixel] onload error', err); }
+          };
+          t.onerror = function(){ console.warn('[Meta Pixel] falha ao carregar fbevents.js'); };
+          s = b.getElementsByTagName('script')[0]; s.parentNode.insertBefore(t, s);
+          fbq('init', '1383313273845160');
+          if (!window.__pvTracked) { fbq('track', 'PageView'); window.__pvTracked = true; }
+        } catch (err) { console.error('[Meta Pixel] init error', err); }
+      })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+    </script>
+
+    <!-- Utilitários públicos seguros para disparar eventos (ex.: botões gerados por IA) -->
+    <script>
+      (function(){
+        function safeTrackFB(event, data){
+          try {
+            if (window.fbq && typeof fbq === 'function') { fbq('track', event, data || {}); }
+            else { console.info('[Meta Pixel] fbq não pronto para', event); }
+          } catch(e){ console.error('[Meta Pixel] track error', e); }
+        }
+        function safeTrackUTM(event, data){
+          try {
+            if (window.utmify && typeof window.utmify.track === 'function') { window.utmify.track(event, data || {}); }
+            else if (window.pixel && typeof window.pixel.track === 'function') { window.pixel.track(event, data || {}); }
+            else { console.info('[UTMify] tracker não pronto para', event); }
+          } catch(e){ console.error('[UTMify] track error', e); }
+        }
+
+        window.trackViewContent = function(contentData){ safeTrackFB('ViewContent', contentData); safeTrackUTM('ViewContent', contentData); };
+        window.trackPurchase = function(value, currency, contentData){
+          var payload = { value: value, currency: currency || 'BRL', content_name: (contentData && contentData.name) || 'purchase' };
+          safeTrackFB('Purchase', payload); safeTrackUTM('Purchase', payload);
+        };
+
+        window.autoWireTracking = function(root){
+          try {
+            root = root || document;
+            var els = root.querySelectorAll('[data-track-event]');
+            els.forEach(function(el){
+              var ev = el.getAttribute('data-track-event'); if (!ev) return;
+              el.addEventListener('click', function(){
+                var data = {};
+                try { data = JSON.parse(el.getAttribute('data-track-payload') || '{}'); } catch(e){}
+                safeTrackFB(ev, data); safeTrackUTM(ev, data);
+              }, { passive: true });
+            });
+          } catch(e){ console.error('autoWireTracking error', e); }
+        };
+
+        if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', function(){ window.autoWireTracking(); }); }
+        else { window.autoWireTracking(); }
+      })();
+    </script>
+  </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>

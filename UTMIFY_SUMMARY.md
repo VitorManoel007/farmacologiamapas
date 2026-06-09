@@ -1,4 +1,4 @@
-# Meta Pixel - Sumário Técnico da Implementação
+# UTMify - Sumário Técnico da Implementação
 
 ## 📊 Configuração Finalizada
 
@@ -14,8 +14,8 @@
 ```typescript
 // src/App.tsx (line ~23)
 useEffect(() => {
-  metaPixel.init().catch((error) => {
-    console.error('[App] Meta Pixel initialization error:', error);
+  utmifyPixel.init().catch((error) => {
+    console.error('[App] UTMify initialization error:', error);
   });
 }, []);
 ```
@@ -37,8 +37,8 @@ export const Lp = (): JSX.Element => {
 
 **Log esperado no console:**
 ```
-[Meta Pixel] ✓ Initialized successfully
-[Meta Pixel] PageView tracked
+[UTMify] ✓ Initialized successfully
+[UTMify] PageView tracked
 ```
 
 ---
@@ -92,8 +92,8 @@ const handleCompletePlanClick = () => {
 
 **Log esperado no console:**
 ```
-[Meta Pixel] InitiateCheckout tracked (basic)
-[Meta Pixel] InitiateCheckout tracked (complete)
+[UTMify] InitiateCheckout tracked (basic)
+[UTMify] InitiateCheckout tracked (complete)
 ```
 
 ---
@@ -109,7 +109,7 @@ const handleCompletePlanClick = () => {
 
 **Função preparada e pronta:**
 ```typescript
-metaPixel.trackPurchase(value, 'BRL', planType);
+utmifyPixel.trackPurchase(value, 'BRL', planType);
 ```
 
 ---
@@ -124,13 +124,13 @@ npm run build
 
 ### ✅ Console Logs
 Abra DevTools (F12) → Console:
-- [ ] `[Meta Pixel] ✓ Initialized successfully`
-- [ ] `[Meta Pixel] PageView tracked` (ao carregar)
-- [ ] `[Meta Pixel] InitiateCheckout tracked (basic)` (ao clicar botão)
-- [ ] `[Meta Pixel] InitiateCheckout tracked (complete)` (ao clicar botão)
+- [ ] `[UTMify] ✓ Initialized successfully`
+- [ ] `[UTMify] PageView tracked` (ao carregar)
+- [ ] `[UTMify] InitiateCheckout tracked (basic)` (ao clicar botão)
+- [ ] `[UTMify] InitiateCheckout tracked (complete)` (ao clicar botão)
 
-### ✅ Meta Events Manager
-1. Acesse: https://business.facebook.com/ → Events Manager
+### ✅ Meta UTMify dashboard
+1. Acesse: UTMify dashboard or developer console
 2. Selecione Pixel: `1383313273845160`
 3. Vá para "Test Events"
 4. Verifique:
@@ -139,8 +139,8 @@ Abra DevTools (F12) → Console:
    - [ ] InitiateCheckout aparece ao clicar "Quero o Plano Completo"
    - [ ] Nenhum evento duplicado
 
-### ✅ Meta Pixel Helper
-1. Instale extensão Chrome: "Meta Pixel Helper"
+### ✅ UTMify logs
+1. Abra o console do navegador para UTMify logs
 2. Recarregue a página
 3. Verifique:
    - [ ] Extensão mostra eventos em tempo real
@@ -154,11 +154,11 @@ Abra DevTools (F12) → Console:
 ### Deduplicação
 - ✅ Bloqueia eventos iguais em menos de 2 segundos
 - ✅ React Strict Mode compatible
-- ✅ Console warning: `"[Meta Pixel] InitiateCheckout blocked: duplicate within 2000ms"`
+- ✅ Console warning: `"[UTMify] InitiateCheckout blocked: duplicate within 2000ms"`
 
 ### Type Safety
 - ✅ TypeScript 100% tipado
-- ✅ Interfaces para fbq
+- ✅ Tipos para UTMify
 - ✅ Erros em tempo de compilação
 
 ### Inicialização Segura
@@ -168,7 +168,7 @@ Abra DevTools (F12) → Console:
 
 ### Tratamento de Erros
 - ✅ Try-catch em todas as chamadas
-- ✅ Verificação segura de fbq
+- ✅ Verificação segura de UTMify
 - ✅ Fallback se SDK falhar
 
 ---
@@ -177,7 +177,7 @@ Abra DevTools (F12) → Console:
 
 | Arquivo | Mudança |
 |---------|---------|
-| `src/App.tsx` | Adicionado `useEffect` para inicializar Meta Pixel |
+| `src/App.tsx` | Adicionado `useEffect` para inicializar UTMify |
 | `src/pages/Lp.tsx` | Adicionado `usePixelTracking()` para PageView em rotas |
 | `src/pages/sections/CompletePlanSection.tsx` | Adicionados `onClick` handlers nos 2 botões |
 
@@ -185,9 +185,9 @@ Abra DevTools (F12) → Console:
 
 | Arquivo | Descrição |
 |---------|-----------|
-| `src/lib/metaPixel.ts` | Core Meta Pixel manager (tipado, com deduplicação) |
+| `src/lib/utmifyPixel.ts` | Core UTMify manager (tipado, com deduplicação) |
 | `src/hooks/use-pixel-tracking.ts` | Hook React para rastreamento |
-| `META_PIXEL_VALIDATION.md` | Documentação de validação (este arquivo) |
+| `UTMIFY_VALIDATION.md` | Documentação de validação (este arquivo) |
 
 ---
 
@@ -196,23 +196,23 @@ Abra DevTools (F12) → Console:
 ### Teste 1: PageView
 1. Abra DevTools (F12)
 2. Recarregue a página
-3. Veja console: `[Meta Pixel] PageView tracked`
+3. Veja console: `[UTMify] PageView tracked`
 
 ### Teste 2: InitiateCheckout (Botão Básico)
 1. Clique em "QUERO SOMENTE O PLANO BÁSICO"
-2. Veja console: `[Meta Pixel] InitiateCheckout tracked (basic)`
-3. Verifique Events Manager → novo evento aparece
+2. Veja console: `[UTMify] InitiateCheckout tracked (basic)`
+3. Verifique UTMify dashboard → novo evento aparece
 
 ### Teste 3: InitiateCheckout (Botão Completo)
 1. Clique em "QUERO O PLANO COMPLETO"
-2. Veja console: `[Meta Pixel] InitiateCheckout tracked (complete)`
-3. Verifique Events Manager → novo evento aparece
+2. Veja console: `[UTMify] InitiateCheckout tracked (complete)`
+3. Verifique UTMify dashboard → novo evento aparece
 
 ### Teste 4: Deduplicação
 1. Clique rapidamente (2x) no mesmo botão
 2. Veja console: primeiro dispara, segundo mostra:
    ```
-   [Meta Pixel] InitiateCheckout blocked: duplicate within 2000ms
+   [UTMify] InitiateCheckout blocked: duplicate within 2000ms
    ```
 3. Eventos Manager mostra apenas 1 evento (não duplicado)
 
@@ -237,14 +237,14 @@ Abra DevTools (F12) → Console:
 
 Se algum evento não aparecer:
 
-1. **Console vazio de logs Meta Pixel?**
-   - Verifique se `src/App.tsx` inicializa `metaPixel.init()`
+1. **Console vazio de logs UTMify?**
+   - Verifique se `src/App.tsx` inicializa `utmifyPixel.init()`
    - Verifique se há bloqueadores de anúncio
 
-2. **Events Manager não mostra eventos?**
+2. **UTMify dashboard não mostra eventos?**
    - Pixel ID correto? `1383313273845160`
    - Pixel está ativo na propriedade do Meta?
-   - Meta Pixel Helper mostra erros?
+   - UTMify logs mostram erros?
 
 3. **Eventos duplicados?**
    - Sistema de deduplicação está ativo (2 segundos)

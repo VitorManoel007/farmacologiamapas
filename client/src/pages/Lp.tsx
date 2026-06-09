@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { BasicPlanSection } from "./sections/BasicPlanSection";
 import { CompletePlanSection } from "./sections/CompletePlanSection";
 import { DeliverablesGridSection } from "./sections/DeliverablesGridSection";
@@ -20,6 +21,32 @@ import { usePixelTracking } from "@/hooks/use-pixel-tracking";
 export const Lp = (): JSX.Element => {
   // Track PageView on route change
   usePixelTracking();
+
+  useEffect(() => {
+    // ALTERE O LINK PARA A PÁGINA QUE QUISER MOSTRAR QUANDO O USUÁRIO TENTAR SAIR
+    const link = 'https://meubackredirect.com.br';
+
+    const urlBackRedirect =
+      link.trim() +
+      (link.indexOf('?') > 0 ? '&' : '?') +
+      document.location.search.replace('?', '').toString();
+
+    history.pushState({}, '', location.href);
+    history.pushState({}, '', location.href);
+    history.pushState({}, '', location.href);
+
+    const handler = () => {
+      console.log('onpopstate', urlBackRedirect);
+      setTimeout(() => {
+        location.href = urlBackRedirect;
+      }, 1);
+    };
+
+    window.addEventListener('popstate', handler);
+    return () => {
+      window.removeEventListener('popstate', handler);
+    };
+  }, []);
 
   return (
     <main className="flex w-full flex-col overflow-x-hidden bg-[#101720]">

@@ -1,4 +1,4 @@
-# 🎯 Meta Pixel - Event Flow Visual
+# 🎯 UTMify - Event Flow Visual
 
 ## Pixel ID: `1383313273845160`
 
@@ -14,14 +14,14 @@
                                  ▼
 ┌─────────────────────────────────────────────────────────────────────┐
 │ App.tsx useEffect() - PRIMEIRA EXECUÇÃO                             │
-│ ├─ metaPixel.init()                                                │
-│ ├─ Carrega script do Facebook                                      │
-│ ├─ Inicializa fbq                                                  │
+│ ├─ utmifyPixel.init()                                                │
+│ ├─ Carrega script do UTMify                                      │
+│ ├─ Inicializa UTMify                                               │
 │ └─ Dispara: PageView (initial)                                     │
 │                                                                     │
-│ 📱 Console: [Meta Pixel] ✓ Initialized successfully                │
-│ 📱 Console: [Meta Pixel] PageView tracked                          │
-│ 📊 Events Manager: PageView ✓                                      │
+│ 📱 Console: [UTMify] ✓ Initialized successfully                │
+│ 📱 Console: [UTMify] PageView tracked                          │
+│ 📊 UTMify dashboard: PageView ✓                                      │
 └─────────────────────────────────────────────────────────────────────┘
                                  │
                     ╔════════════╩════════════╗
@@ -38,11 +38,11 @@
         │                      │  │ 📊 Events: PageView  │
         │ 💰 R$ 15,90          │  └──────────────────────┘
         │ 📱 Console:          │
-        │ [Meta Pixel]         │
+        │ [UTMify]         │
         │ InitiateCheckout     │
         │ tracked (basic)      │
         │                      │
-        │ 📊 Events Manager:   │
+        │ 📊 UTMify dashboard:   │
         │ InitiateCheckout ✓   │
         │                      │
         │ 🔗 Abre URL:         │
@@ -62,11 +62,11 @@
         │                      │
         │ 💰 R$ 25,90          │
         │ 📱 Console:          │
-        │ [Meta Pixel]         │
+        │ [UTMify]         │
         │ InitiateCheckout     │
         │ tracked (complete)   │
         │                      │
-        │ 📊 Events Manager:   │
+        │ 📊 UTMify dashboard:   │
         │ InitiateCheckout ✓   │
         │                      │
         │ 🔗 Abre URL:         │
@@ -82,14 +82,14 @@
         │                      │
         │ Webhook ou Success   │
         │ Page chama:          │
-        │ metaPixel.track      │
+        │ utmifyPixel.track      │
         │ Purchase()           │
         │                      │
         │ 📱 Console:          │
-        │ [Meta Pixel]         │
+        │ [UTMify]         │
         │ Purchase tracked     │
         │                      │
-        │ 📊 Events Manager:   │
+        │ 📊 UTMify dashboard:   │
         │ Purchase ✓           │
         └──────────────────────┘
 ```
@@ -113,7 +113,7 @@
 
 src/App.tsx:
   useEffect(() => {
-    metaPixel.init(); ← Dispara PageView aqui
+    utmifyPixel.init(); ← Dispara PageView aqui
   }, []);
 
 src/pages/Lp.tsx:
@@ -197,7 +197,7 @@ src/pages/sections/CompletePlanSection.tsx:
 └─────────────────────────────────────┘
 
 IMPLEMENTAR SOMENTE DEPOIS:
-  metaPixel.trackPurchase(25.90, 'BRL', 'complete');
+  utmifyPixel.trackPurchase(25.90, 'BRL', 'complete');
 ```
 
 ---
@@ -205,7 +205,7 @@ IMPLEMENTAR SOMENTE DEPOIS:
 ## ✅ Validation Checklist
 
 ### Setup
-- [x] Pixel ID: 1383313273845160
+- [x] Pixel ID: 6a269b721892220b96e9724b
 - [x] TypeScript: ✅ 100% tipado
 - [x] React: ✅ Compatible
 - [x] SPA (Wouter): ✅ Compatible
@@ -222,16 +222,16 @@ IMPLEMENTAR SOMENTE DEPOIS:
 - [x] React Strict Mode: ✅ Compatible
 - [x] Multiple inits: ✅ Bloqueado
 - [x] Error handling: ✅ Try-catch
-- [x] fbq check: ✅ Safe
+- [x] UTMify runtime check: ✅ Safe
 
-### Events Manager
+### UTMify dashboard
 - [ ] PageView aparece no carregamento
 - [ ] InitiateCheckout (basic) aparece ao clicar
 - [ ] InitiateCheckout (complete) aparece ao clicar
 - [ ] Nenhum evento duplicado
 - [ ] Nenhum evento inesperado
 
-### Meta Pixel Helper
+### UTMify logs
 - [ ] Extensão instalada
 - [ ] Mostra eventos em tempo real
 - [ ] Status: VERDE ✓
@@ -243,24 +243,24 @@ IMPLEMENTAR SOMENTE DEPOIS:
 
 ```javascript
 // No carregamento inicial:
-[Meta Pixel] ✓ Initialized successfully
-[Meta Pixel] PageView tracked
+[UTMify] ✓ Initialized successfully
+[UTMify] PageView tracked
 
 // Ao clicar "QUERO SOMENTE O BÁSICO":
-[Meta Pixel] InitiateCheckout tracked (basic)
+[UTMify] InitiateCheckout tracked (basic)
 // Abre: https://pay.cakto.com.br/p2cpxzq_905851
 
 // Ao clicar "QUERO O PLANO COMPLETO":
-[Meta Pixel] InitiateCheckout tracked (complete)
+[UTMify] InitiateCheckout tracked (complete)
 // Abre: https://pay.cakto.com.br/f2aq3km_905864
 
 // Se clicar 2x rápido (dentro de 2s):
-[Meta Pixel] InitiateCheckout blocked: duplicate within 2000ms
-// Evento NÃO é duplicado no Events Manager
+[UTMify] InitiateCheckout blocked: duplicate within 2000ms
+// Evento NÃO é duplicado no UTMify dashboard
 
 // Se houver erro:
-[Meta Pixel] Initialization error: [erro]
-[Meta Pixel] InitiateCheckout error: [erro]
+[UTMify] Initialization error: [erro]
+[UTMify] InitiateCheckout error: [erro]
 ```
 
 ---
@@ -286,9 +286,9 @@ IMPLEMENTAR SOMENTE DEPOIS:
 
 | Problema | Solução |
 |----------|---------|
-| Events não aparecem | Verifique console logs, Meta Pixel Helper, Cookie consent |
+| Events não aparecem | Verifique console logs, UTMify logs, Cookie consent |
 | Eventos duplicados | Sistema de deduplicação está ativo (2s). Em prod será 1. |
-| Pixel ID errado | Verifique `1383313273845160` em metaPixel.ts |
+| Pixel ID errado | Verifique `1383313273845160` em utmifyPixel.ts |
 | React Strict Mode duplicação | Normal em dev. Em prod será apenas 1. |
 | Botão não redireciona | Verifique URL da Cakto, navegador bloqueador? |
 | Purchase não dispara | Correto! Implementar após pagamento confirmado. |
@@ -297,4 +297,4 @@ IMPLEMENTAR SOMENTE DEPOIS:
 
 **Status:** ✅ **PRONTO PARA VALIDAÇÃO**
 
-Teste no Meta Events Manager → Confirme recebimento dos eventos → Launch!
+Teste no Meta UTMify dashboard → Confirme recebimento dos eventos → Launch!
