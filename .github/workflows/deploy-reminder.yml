@@ -1,0 +1,33 @@
+name: Create Deploy Reminder
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  create-deploy-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create deploy reminder issue
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const commit = context.payload.head_commit || (context.payload.commits && context.payload.commits[0]);
+            const sha = commit ? commit.id : context.sha;
+            const msg = commit ? commit.message : '';
+            const short = sha ? sha.slice(0,7) : context.sha.slice(0,7);
+            const title = `Deploy reminder: ${short} - ${msg.split('\n')[0] || ''}`;
+            const body = `Commit: ${sha}\n\nMessage: ${msg}\n\nExecute deploy on VPS with one of the commands below (replace if needed):\n\n\\`\\\`\\\`bash\ncd /var/www/farmaco.click && sudo ./deploy/deploy.sh ${sha}\n\\\`\\\`\\\`\n\nOr deploy branch:\n\n\\\`\\\`\\\`bash\ncd /var/www/farmaco.click && sudo ./deploy/deploy.sh main\n\\\`\\\`\\\`\n\nThis issue was created automatically to remind the operator to run the deploy after verification.`;
+
+            // avoid creating duplicate open issues for same commit
+            const issues = await github.rest.issues.listForRepo({ owner: context.repo.owner, repo: context.repo.repo, state: 'open' });
+            const exists = issues.data.find(i => i.title === title);
+            if (!exists) {
+              await github.rest.issues.create({ owner: context.repo.owner, repo: context.repo.repo, title, body, labels: ['deploy-reminder'] }).catch(async (err) => {
+                // fallback: create without labels if label doesn't exist
+                await github.rest.issues.create({ owner: context.repo.owner, repo: context.repo.repo, title, body });
+              });
+            } else {
+              console.log('Deploy reminder issue already exists:', exists.number);
+            }
