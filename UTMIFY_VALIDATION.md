@@ -1,6 +1,6 @@
 /**
  * =====================================================================
- * META PIXEL CONFIGURATION - VALIDATION & DOCUMENTATION
+ * UTMIFY CONFIGURATION - VALIDATION & DOCUMENTATION
  * =====================================================================
  * 
  * PIXEL ID: 1383313273845160
@@ -10,7 +10,7 @@
  * =====================================================================
  * 
  * ✓ Arquivos criados:
- *   1. src/lib/metaPixel.ts       - Core Meta Pixel manager
+ *   1. src/lib/utmifyPixel.ts       - Core UTMify manager
  *   2. src/hooks/use-pixel-tracking.ts - React hook for tracking
  * 
  * ✓ Arquivos modificados:
@@ -46,7 +46,7 @@
  *    ├─ NÃO dispara na landing page
  *    ├─ Deve ser chamado APENAS após pagamento confirmado
  *    ├─ Opção A: Via webhook da Cakto
- *    ├─ Opção B: Chamar metaPixel.trackPurchase() após confirmação
+ *    ├─ Opção B: Chamar utmifyPixel.trackPurchase() após confirmação
  *    └─ Status: ✓ PREPARADO (mas desativado para landing)
  * 
  * =====================================================================
@@ -59,12 +59,12 @@
  *   - Impede múltiplos inicializações
  * 
  * ✓ Tipagem TypeScript:
- *   - Interfaces para fbq
+ *   - Tipos para UTMify
  *   - Type-safe event tracking
  *   - Erros em tempo de compilação
  * 
  * ✓ Proteção contra erros:
- *   - Verifica existência de fbq
+ *   - Verifica existência do runtime UTMify
  *   - Try-catch em todas as chamadas
  *   - Fallback seguro se SDK falhar
  * 
@@ -79,10 +79,10 @@
  *   - PageView em toda mudança de rota
  * 
  * =====================================================================
- * COMO VALIDAR NO META EVENTS MANAGER
+ * COMO VALIDAR NO UTMIFY
  * =====================================================================
  * 
- * 1. Acesse: https://business.facebook.com/ → Events Manager
+ * 1. Acesse: https://utmify dashboard/ → UTMify dashboard
  * 
  * 2. Selecione sua propriedade/pixel: 1383313273845160
  * 
@@ -98,10 +98,10 @@
  * 
  *    INITIATE CHECKOUT:
  *    ├─ Clique no botão "QUERO SOMENTE O PLANO BÁSICO"
- *    ├─ Deve aparecer no Events Manager
+ *    ├─ Deve aparecer no UTMify dashboard
  *    ├─ Dados esperados: {"content_name": "Plan: basic", "value": 15.9}
  *    ├─ Clique no botão "QUERO O PLANO COMPLETO"
- *    ├─ Deve aparecer no Events Manager
+ *    ├─ Deve aparecer no UTMify dashboard
  *    ├─ Dados esperados: {"content_name": "Plan: complete", "value": 25.9}
  *    └─ Nenhum outro botão deve disparar InitiateCheckout
  * 
@@ -109,8 +109,8 @@
  *    ├─ NÃO deve aparecer na landing page
  *    └─ Deve ser implementado apenas após pagamento confirmado
  * 
- * 5. Use Meta Pixel Helper:
- *    ├─ Chrome Extension: "Meta Pixel Helper"
+ * 5. Use UTMify logs:
+ *    ├─ Check browser console for UTMify logs
  *    ├─ Deve mostrar eventos em tempo real
  *    ├─ Deve mostrar: PageView + InitiateCheckout (sem duplicação)
  *    └─ Deve estar VERDE (sem erros)
@@ -121,22 +121,22 @@
  * 
  * Abra o DevTools (F12) → Console e veja os logs:
  * 
- * ✓ Meta Pixel initialization:
- *   [Meta Pixel] ✓ Initialized successfully
+ * ✓ UTMify initialization:
+ *   [UTMify] ✓ Initialized successfully
  * 
  * ✓ PageView tracking:
- *   [Meta Pixel] PageView tracked
+ *   [UTMify] PageView tracked
  * 
  * ✓ InitiateCheckout tracking:
- *   [Meta Pixel] InitiateCheckout tracked (basic)
- *   [Meta Pixel] InitiateCheckout tracked (complete)
+ *   [UTMify] InitiateCheckout tracked (basic)
+ *   [UTMify] InitiateCheckout tracked (complete)
  * 
  * ✓ Deduplicação em ação:
- *   [Meta Pixel] InitiateCheckout blocked: duplicate within 2000ms
+ *   [UTMify] InitiateCheckout blocked: duplicate within 2000ms
  * 
  * ✓ Erros (se houver):
- *   [Meta Pixel] Initialization error: ...
- *   [Meta Pixel] InitiateCheckout error: ...
+ *   [UTMify] Initialization error: ...
+ *   [UTMify] InitiateCheckout error: ...
  * 
  * =====================================================================
  * CHECKLIST DE VALIDAÇÃO
@@ -145,14 +145,14 @@
  * Antes de considerar PRONTO:
  * 
  * [ ] Build sem erros: npm run build
- * [ ] Meta Pixel Helper extensão instalada no Chrome
- * [ ] Console mostra: "[Meta Pixel] ✓ Initialized successfully"
- * [ ] Página carregada → PageView aparece no Events Manager
+ * [ ] UTMify logs disponíveis no console
+ * [ ] Console mostra: "[UTMify] ✓ Initialized successfully"
+ * [ ] Página carregada → PageView aparece no UTMify dashboard
  * [ ] Clique "QUERO SOMENTE O BÁSICO" → InitiateCheckout aparece
  * [ ] Clique "QUERO O PLANO COMPLETO" → InitiateCheckout aparece
  * [ ] Teste duplo clique → Deduplicação funciona (vê mensagem no console)
- * [ ] Events Manager mostra eventos SEM duplicação
- * [ ] Meta Pixel Helper está VERDE (sem erros)
+ * [ ] UTMify dashboard mostra eventos SEM duplicação
+ * [ ] UTMify logs mostram status correto
  * [ ] Nenhum outro botão dispara InitiateCheckout
  * [ ] Layout mantém-se intacto
  * [ ] Botões funcionam e redirecionam corretamente
@@ -166,11 +166,11 @@
  * 
  *   App.tsx (useEffect)
  *       ↓
- *   metaPixel.init()  ← Executado UMA ÚNICA VEZ
+ *   utmifyPixel.init()  ← Executado UMA ÚNICA VEZ
  *       ↓
- *   Carrega script do Facebook
+ *   Carrega script do UTMify
  *       ↓
- *   inicializa fbq
+ *   inicializa UTMify
  *       ↓
  *   Dispara PageView inicial
  *       ↓
@@ -197,7 +197,7 @@
  * Clique 2 em "QUERO SOMENTE O BÁSICO" (dentro de 2s):
  *   └─ Diferença = timestamp_2 - timestamp_1 < 2000ms
  *   └─ ✗ Evento BLOQUEADO (console warn)
- *   └─ Log: "[Meta Pixel] InitiateCheckout blocked: duplicate within 2000ms"
+ *   └─ Log: "[UTMify] InitiateCheckout blocked: duplicate within 2000ms"
  * 
  * Clique 3 em "QUERO SOMENTE O BÁSICO" (depois de 2s):
  *   └─ Diferença = timestamp_3 - timestamp_1 > 2000ms
@@ -209,7 +209,7 @@
  * 
  * 1. Implementar Purchase via webhook da Cakto:
  *    - Configurar endpoint para receber webhook de pagamento
- *    - Chamar metaPixel.trackPurchase() com dados do pagamento
+ *    - Chamar utmifyPixel.trackPurchase() com dados do pagamento
  *    - Ou integrar com API da Cakto oficialmente
  * 
  * 2. Adicionar mais eventos (opcional):
@@ -227,9 +227,9 @@
  * Se algum evento não aparecer:
  * 
  * 1. Abra DevTools (F12) → Console
- * 2. Procure por logs com "[Meta Pixel]"
+ * 2. Procure por logs com "[UTMify]"
  * 3. Verifique se há erros
- * 4. Meta Pixel Helper mostra erro?
+ * 4. UTMify logs mostram erro?
  * 5. Verificar:
  *    - Pixel ID está correto: 1383313273845160
  *    - Pixel está ativo na propriedade do Meta

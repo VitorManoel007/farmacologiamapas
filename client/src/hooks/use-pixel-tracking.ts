@@ -7,8 +7,22 @@ import { metaPixel } from '@/lib/metaPixel';
  */
 export function usePixelTracking() {
   useEffect(() => {
-    // Track PageView on mount (route change)
-    metaPixel.trackPageView();
+    let active = true;
+
+    metaPixel.init()
+      .then(() => {
+        if (!active) {
+          return;
+        }
+        metaPixel.trackPageView();
+      })
+      .catch((error) => {
+        console.error('[usePixelTracking] Meta Pixel init error:', error);
+      });
+
+    return () => {
+      active = false;
+    };
   }, []);
 
   return {

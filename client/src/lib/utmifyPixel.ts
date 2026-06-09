@@ -52,10 +52,10 @@ class UTMifyPixelManager {
     try {
       await this._loadPixelScript();
 
-      console.log('[Meta Pixel] ✓ UTMify pixel initialization complete');
+      console.log('[UTMify] ✓ UTMify pixel initialization complete');
       this.isInitialized = true;
     } catch (error) {
-      console.error('[Meta Pixel] Initialization error:', error);
+      console.error('[UTMify] Initialization error:', error);
       this.isInitialized = true;
     }
   }
@@ -76,16 +76,16 @@ class UTMifyPixelManager {
       script.defer = true;
       script.src = 'https://cdn.utmify.com.br/scripts/pixel/pixel.js';
       script.onload = () => {
-        console.log('[Meta Pixel] UTMify pixel script loaded');
+        console.log('[UTMify] UTMify pixel script loaded');
         resolve();
       };
       script.onerror = () => {
-        console.error('[Meta Pixel] Failed to load UTMify pixel script');
+        console.error('[UTMify] Failed to load UTMify pixel script');
         resolve();
       };
 
       document.head.appendChild(script);
-      console.log('[Meta Pixel] UTMify pixel script injected');
+      console.log('[UTMify] UTMify pixel script injected');
     });
   }
 
@@ -103,7 +103,7 @@ class UTMifyPixelManager {
       return;
     }
 
-    console.warn('[Meta Pixel] No compatible pixel tracker found for', eventType);
+    console.warn('[UTMify] No compatible pixel tracker found for', eventType);
   }
 
   /**
@@ -123,7 +123,7 @@ class UTMifyPixelManager {
 
     if (timeSinceLastEvent < DEDUP_COOLDOWN) {
       console.warn(
-        `[Meta Pixel] ${eventType} blocked: duplicate within ${DEDUP_COOLDOWN}ms`
+        `[UTMify] ${eventType} blocked: duplicate within ${DEDUP_COOLDOWN}ms`
       );
       return false;
     }
@@ -142,9 +142,9 @@ class UTMifyPixelManager {
 
     try {
       this._trackEvent('PageView');
-      console.log('[Meta Pixel] PageView tracked');
+      console.log('[UTMify] PageView tracked');
     } catch (error) {
-      console.error('[Meta Pixel] PageView error:', error);
+      console.error('[UTMify] PageView error:', error);
     }
   }
 
@@ -161,9 +161,9 @@ class UTMifyPixelManager {
         content_name: `InitiateCheckout: ${planType}`,
         content_type: 'product',
       });
-      console.log('[Meta Pixel] InitiateCheckout tracked');
+      console.log('[UTMify] InitiateCheckout tracked');
     } catch (error) {
-      console.error('[Meta Pixel] InitiateCheckout error:', error);
+      console.error('[UTMify] InitiateCheckout error:', error);
     }
   }
 
@@ -187,9 +187,9 @@ class UTMifyPixelManager {
         content_name: planType ? `Purchase: ${planType}` : 'Purchase',
         content_type: 'product',
       });
-      console.log('[Meta Pixel] Purchase tracked');
+      console.log('[UTMify] Purchase tracked');
     } catch (error) {
-      console.error('[Meta Pixel] Purchase error:', error);
+      console.error('[UTMify] Purchase error:', error);
     }
   }
 
@@ -207,4 +207,4 @@ class UTMifyPixelManager {
 // Singleton instance
 const utmifyPixel = new UTMifyPixelManager();
 
-export { utmifyPixel as metaPixel, PIXEL_ID };
+export { utmifyPixel, PIXEL_ID };
