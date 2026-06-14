@@ -1,0 +1,190 @@
+# IMPLEMENTAÇÃO COMPLETA DO PIXEL DA META
+
+Atue como um desenvolvedor Front-end especialista em Meta Pixel, JavaScript, rastreamento de eventos e integração com a plataforma Cakto.
+
+## Objetivo
+
+Implementar corretamente o Pixel da Meta em todo o projeto, garantindo que não existam eventos duplicados e que cada evento seja disparado apenas pelo sistema responsável.
+
+---
+
+# PIXEL DA META
+
+**Pixel ID:**
+
+**1383313273845160**
+
+---
+
+# EVENTOS QUE DEVEM EXISTIR
+
+## 1. PAGE VIEW
+
+### Responsável
+
+O SITE.
+
+### Onde disparar
+
+Em todas as páginas do site.
+
+### Regras
+
+* Disparar automaticamente no carregamento da página.
+* Disparar apenas uma vez por carregamento.
+* Não pode haver duplicidade.
+* Não utilizar dois Pixels diferentes.
+
+---
+
+## 2. INITIATE CHECKOUT
+
+### Responsável
+
+A CAKTO.
+
+### Regras
+
+* O site NÃO deve disparar o evento InitiateCheckout.
+* O evento deve ser enviado exclusivamente pela integração nativa da Cakto.
+* Remova qualquer código JavaScript, HTML ou Google Tag Manager que esteja disparando esse evento pelo site.
+* Deve existir apenas um InitiateCheckout, enviado pela Cakto.
+
+---
+
+## 3. PURCHASE
+
+### Responsável
+
+A CAKTO.
+
+### Regras
+
+* O site NÃO deve disparar Purchase.
+* O evento Purchase deve ser enviado exclusivamente pela integração oficial da Cakto.
+* Caso exista qualquer código manual enviando Purchase, ele deve ser removido.
+
+---
+
+# LIMPEZA OBRIGATÓRIA
+
+Antes da implementação:
+
+Procure e remova qualquer instalação antiga do Meta Pixel.
+
+Verifique:
+
+* Código HTML
+* Scripts JavaScript
+* Google Tag Manager
+* Plugins
+* Integrações antigas
+* Scripts duplicados
+
+Caso exista mais de um Pixel ou mais de um disparo do mesmo evento, mantenha apenas a estrutura definida neste documento.
+
+---
+
+# ESTRUTURA FINAL
+
+## SITE
+
+Meta Pixel Base
+
+↓
+
+PageView
+
+---
+
+## CAKTO
+
+InitiateCheckout
+
+↓
+
+Purchase
+
+---
+
+# NÃO IMPLEMENTAR
+
+Não adicionar:
+
+* ViewContent
+* AddToCart
+* Lead
+* CompleteRegistration
+* Search
+* Contact
+* AddPaymentInfo
+* Purchase manual
+* InitiateCheckout manual
+
+Quero apenas:
+
+✅ PageView (Site)
+
+✅ InitiateCheckout (Cakto)
+
+✅ Purchase (Cakto)
+
+---
+
+# VALIDAÇÃO FINAL
+
+Após concluir a implementação:
+
+Verifique utilizando o Meta Pixel Helper e a ferramenta "Testar Eventos" da Meta.
+
+Confirme que:
+
+✅ O Pixel ID carregado é exatamente:
+
+1383313273845160
+
+✅ Existe apenas um Pixel ativo.
+
+✅ O evento PageView dispara apenas uma vez ao carregar qualquer página.
+
+✅ O evento InitiateCheckout é enviado apenas pela Cakto.
+
+✅ O evento Purchase é enviado apenas pela Cakto.
+
+✅ Não existem eventos duplicados.
+
+✅ Não existem erros no console do navegador relacionados ao Meta Pixel.
+
+---
+
+# RESULTADO ESPERADO
+
+Fluxo correto de rastreamento:
+
+Usuário acessa o site
+
+↓
+
+PageView (Site)
+
+↓
+
+Usuário clica em "Comprar"
+
+↓
+
+Redirecionamento para o checkout da Cakto
+
+↓
+
+InitiateCheckout (Cakto)
+
+↓
+
+Compra aprovada
+
+↓
+
+Purchase (Cakto)
+
+O objetivo é ter uma implementação limpa, sem eventos duplicados, seguindo as boas práticas da Meta e utilizando a Cakto como única responsável pelos eventos de checkout e compra.
