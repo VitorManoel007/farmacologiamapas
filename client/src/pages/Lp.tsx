@@ -16,11 +16,7 @@ import { PerceivedValueSection } from "./sections/PerceivedValueSection";
 import { ValueAnchoringSection } from "./sections/ValueAnchoringSection";
 import { TargetAudienceSection } from "./sections/TargetAudienceSection";
 import { MaterialPreviewSection } from "./sections/MaterialPreviewSection";
-import { usePixelTracking } from "@/hooks/use-pixel-tracking";
-
 export const Lp = (): JSX.Element => {
-  // Track PageView on route change
-  usePixelTracking();
 
   useEffect(() => {
     // ALTERE O LINK PARA A PÁGINA QUE QUISER MOSTRAR QUANDO O USUÁRIO TENTAR SAIR
