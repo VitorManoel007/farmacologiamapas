@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
-import ChatGPT_Image_29_de_mai__de_2026__07_53_38 from "@assets/ChatGPT_Image_29_de_mai._de_2026,_07_53_38.png";
+import ChatGPT_Image_29_de_mai__de_2026__07_53_38 from "@assets/ChatGPT_Image_29_de_mai._de_2026,_07_53_38.webp";
 
 const headingParts = {
   prefix: "Mais de",

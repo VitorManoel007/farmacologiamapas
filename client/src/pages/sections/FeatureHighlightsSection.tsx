@@ -28,7 +28,7 @@ export const FeatureHighlightsSection = (): JSX.Element => {
           <img
             className="mt-[-8px] w-full object-cover"
             alt="Magnific quero que"
-            src="/figmaAssets/magnific--criar-um-mockup-moderno-e-altamente-chamativo-para--81-6.png"
+            src="/figmaAssets/magnific--criar-um-mockup-moderno-e-altamente-chamativo-para--81-6.webp"
           />
         </header>
         <Card className="mt-[-10px] overflow-hidden rounded-md border-0 bg-white shadow-none">
@@ -53,7 +53,7 @@ export const FeatureHighlightsSection = (): JSX.Element => {
                       <img
                         className="h-7 w-7 shrink-0 object-cover"
                         alt="Istockphoto"
-                        src="/figmaAssets/istockphoto-691856234-612x612-photoroom-2.png"
+                        src="/figmaAssets/istockphoto-691856234-612x612-photoroom-2.webp"
                       />
                       <span
                         className="[font-family:'Poppins',Helvetica] text-left flex-1 text-sm font-medium leading-5 tracking-[0.27px] text-[#019a01]"

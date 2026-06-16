@@ -1,10 +1,10 @@
 import { useRef, useState, useCallback } from "react";
 
 const carouselItems = [
-  { image: "/figmaAssets/sample-domperidona.png", name: "Domperidona" },
-  { image: "/figmaAssets/sample-estreptoquinasa.png", name: "Estreptoquinase" },
-  { image: "/figmaAssets/sample-formoterol.png", name: "Formoterol" },
-  { image: "/figmaAssets/sample-glimepirida.png", name: "Glimepirida" },
+  { image: "/figmaAssets/sample-domperidona.webp", name: "Domperidona" },
+  { image: "/figmaAssets/sample-estreptoquinasa.webp", name: "Estreptoquinase" },
+  { image: "/figmaAssets/sample-formoterol.webp", name: "Formoterol" },
+  { image: "/figmaAssets/sample-glimepirida.webp", name: "Glimepirida" },
 ];
 
 export const MaterialCarouselSection = (): JSX.Element => {

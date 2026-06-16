@@ -1,7 +1,7 @@
 import useEmblaCarousel from "embla-carousel-react";
-import imgMarcus from "@assets/Group_1-ezremove_1780670125784.png";
-import imgRafaela from "@assets/img_0136-ezremove_1780670125785.png";
-import imgAndriele from "@assets/img_0136_(1)-ezremove_1780670125786.png";
+import imgMarcus from "@assets/Group_1-ezremove_1780670125784.webp";
+import imgRafaela from "@assets/img_0136-ezremove_1780670125785.webp";
+import imgAndriele from "@assets/img_0136_(1)-ezremove_1780670125786.webp";
 
 const testimonials = [
   { img: imgMarcus, name: "Marcus" },

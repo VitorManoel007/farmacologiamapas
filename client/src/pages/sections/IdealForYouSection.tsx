@@ -3,31 +3,31 @@ import { Card, CardContent } from "@/components/ui/card";
 const items = [
   {
     text: "Tem dificuldade para memorizar farmacologia",
-    image: "/figmaAssets/ideal-memorizar.png",
+    image: "/figmaAssets/ideal-memorizar.webp",
   },
   {
     text: "Quer revisar mais rápido antes das provas",
-    image: "/figmaAssets/ideal-revisar.png",
+    image: "/figmaAssets/ideal-revisar.webp",
   },
   {
     text: "Se perde em PDFs enormes e cansativos",
-    image: "/figmaAssets/ideal-pdfs.png",
+    image: "/figmaAssets/ideal-pdfs.webp",
   },
   {
     text: "Quer estudar pelo celular de forma prática",
-    image: "/figmaAssets/ideal-celular.png",
+    image: "/figmaAssets/ideal-celular.webp",
   },
   {
     text: "Busca mais clareza nos mecanismos de ação",
-    image: "/figmaAssets/ideal-mecanismos.png",
+    image: "/figmaAssets/ideal-mecanismos.webp",
   },
   {
     text: "Precisa revisar medicamentos em minutos",
-    image: "/figmaAssets/ideal-minutos.png",
+    image: "/figmaAssets/ideal-minutos.webp",
   },
   {
     text: "Quer estudar de forma mais visual e organizada",
-    image: "/figmaAssets/ideal-visual.png",
+    image: "/figmaAssets/ideal-visual.webp",
   },
 ];
 

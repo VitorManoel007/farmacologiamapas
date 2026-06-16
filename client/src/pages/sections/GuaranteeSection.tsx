@@ -10,7 +10,8 @@ export const GuaranteeSection = (): JSX.Element => {
     <section className="mt-6 w-full px-4">
       <div className="mx-auto flex w-full max-w-sm flex-col items-center px-1 pb-6 pt-5">
         <img
-          src="/figmaAssets/garantia-7-dias.png"
+          src="/figmaAssets/garantia-7-dias.webp"
+          loading="lazy"
           alt="Selo de garantia 7 dias"
           className="h-28 w-28 object-contain"
         />

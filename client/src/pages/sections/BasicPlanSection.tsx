@@ -4,7 +4,7 @@ const bonusCards = [
   {
     badge: "#1-BÔNUS HOJE!",
     image:
-      "/figmaAssets/magnific--criar-um-mockup-moderno-e-altamente-chamativo-para--81.png",
+      "/figmaAssets/magnific--criar-um-mockup-moderno-e-altamente-chamativo-para--81.webp",
     title: "CONCEITOS BÁSICOS DE FARMACOLOGIA",
     category: "MAPA MENTAL",
     description: (
@@ -16,7 +16,7 @@ const bonusCards = [
   {
     badge: "#2-BÔNUS HOJE!",
     image:
-      "/figmaAssets/magnific--criar-um-mockup-moderno-e-altamente-chamativo-para--81-1.png",
+      "/figmaAssets/magnific--criar-um-mockup-moderno-e-altamente-chamativo-para--81-1.webp",
     title: "FÁRMACOS DE EMERGÊNCIA E URGÊNCIA",
     category: "MAPA MENTAL",
     description: (
@@ -28,7 +28,7 @@ const bonusCards = [
   {
     badge: "#4-BÔNUS HOJE!",
     image:
-      "/figmaAssets/magnific--criar-um-mockup-moderno-e-altamente-chamativo-para--81-2.png",
+      "/figmaAssets/magnific--criar-um-mockup-moderno-e-altamente-chamativo-para--81-2.webp",
     title: "+ 75 PÁGINAS DE CASOS CLÍNICOS DE FARMACOLOGIA",
     category: "MAPA MENTAL",
     description: (
@@ -40,7 +40,7 @@ const bonusCards = [
   {
     badge: "#4-BÔNUS HOJE!",
     image:
-      "/figmaAssets/magnific--criar-um-mockup-moderno-e-altamente-chamativo-para--81-3.png",
+      "/figmaAssets/magnific--criar-um-mockup-moderno-e-altamente-chamativo-para--81-3.webp",
     title: "FÁRMACOS MICROBIANOS COMPLETOS",
     category: "MAPA MENTAL",
     description: (
@@ -52,7 +52,7 @@ const bonusCards = [
   {
     badge: "#5-BÔNUS HOJE!",
     image:
-      "/figmaAssets/magnific--criar-um-mockup-moderno-e-altamente-chamativo-para--81-4.png",
+      "/figmaAssets/magnific--criar-um-mockup-moderno-e-altamente-chamativo-para--81-4.webp",
     title: "PSICOFÁRMACOS CONCEITOS",
     category: "MAPA MENTAL",
     description: (
@@ -64,7 +64,7 @@ const bonusCards = [
   {
     badge: "#6-BÔNUS HOJE!",
     image:
-      "/figmaAssets/magnific--criar-um-mockup-moderno-e-altamente-chamativo-para--81-5.png",
+      "/figmaAssets/magnific--criar-um-mockup-moderno-e-altamente-chamativo-para--81-5.webp",
     title: "FÁRMACOS SISTEMA NERVOSO E PSICOFÁRMACO",
     category: "MAPA MENTAL",
     description: (
@@ -108,6 +108,7 @@ export const BasicPlanSection = (): JSX.Element => {
                     className="h-full w-full rounded-xl object-cover"
                     alt="Magnific criar um"
                     src={card.image}
+                    loading="lazy"
                   />
                 </div>
                 <div className="mt-2 flex w-full items-center justify-center">

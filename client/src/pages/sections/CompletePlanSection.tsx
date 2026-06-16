@@ -19,17 +19,17 @@ const arrowImages = ["/figmaAssets/arrow-4.svg", "/figmaAssets/arrow-4.svg"];
 
 const paymentLogos = [
   {
-    src: "/figmaAssets/pix-photoroom--1--1.png",
+    src: "/figmaAssets/pix-photoroom--1--1.webp",
     alt: "Pix photoroom",
     className: "h-14 w-full object-contain",
   },
   {
-    src: "/figmaAssets/visa-logo-11530966316amvzjrobsf-photoroom-1.png",
+    src: "/figmaAssets/visa-logo-11530966316amvzjrobsf-photoroom-1.webp",
     alt: "Visa logo",
     className: "h-14 w-full object-contain",
   },
   {
-    src: "/figmaAssets/r--1--photoroom-1.png",
+    src: "/figmaAssets/r--1--photoroom-1.webp",
     alt: "R photoroom",
     className: "h-16 w-full object-contain",
   },
@@ -49,7 +49,7 @@ export const CompletePlanSection = (): JSX.Element => {
             <img
               className="mt-1 w-full max-w-[260px] object-cover"
               alt="Magnific criar um"
-              src="/figmaAssets/magnific--criar-um-mockup-moderno-e-altamente-chamativo-para--81-6.png"
+              src="/figmaAssets/magnific--criar-um-mockup-moderno-e-altamente-chamativo-para--81-6.webp"
             />
             <Separator className="mt-[-20px] w-full bg-[#d9d9d9b2]" />
             <ul className="mt-4 w-full list-none space-y-1 p-0">
@@ -118,7 +118,7 @@ export const CompletePlanSection = (): JSX.Element => {
             <img
               className="mt-2 w-full max-w-[260px] object-cover"
               alt="Magnific criar um"
-              src="/figmaAssets/magnific--criar-um-mockup-moderno-e-altamente-chamativo-para--81-7.png"
+              src="/figmaAssets/magnific--criar-um-mockup-moderno-e-altamente-chamativo-para--81-7.webp"
             />
             <p className="mt-2 w-full text-center [font-family:'Poppins',Helvetica] text-sm font-semibold leading-5 tracking-[0.36px] text-black">
               Todos Os Materiais Na Versão Pdf(acesso Imediato)
@@ -160,7 +160,7 @@ export const CompletePlanSection = (): JSX.Element => {
                 <img
                   className="h-6 w-6 object-cover"
                   alt="Istockphoto"
-                  src="/figmaAssets/istockphoto-691856234-612x612-photoroom-2.png"
+                  src="/figmaAssets/istockphoto-691856234-612x612-photoroom-2.webp"
                 />
                 <p className="[font-family:'Poppins',Helvetica] text-center text-base font-semibold leading-snug tracking-[0.5px] text-[#524949]">
                   Você vai economizar R$171,10

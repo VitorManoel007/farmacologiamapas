@@ -1,13 +1,13 @@
 import { Card, CardContent } from "@/components/ui/card";
-import driveImg from "@assets/Untitled_Project-Photoroom_1780602284289.png";
+import driveImg from "@assets/Untitled_Project-Photoroom_1780602284289.webp";
 
 const steps = [
   {
-    image: "/figmaAssets/how-pagamento.png",
+    image: "/figmaAssets/how-pagamento.webp",
     text: "Efetue o pagamento de forma totalmente segura.",
   },
   {
-    image: "/figmaAssets/how-email.png",
+    image: "/figmaAssets/how-email.webp",
     text: "Receba imediatamente no seu Gmail o link de acesso ao material.",
   },
   {
