@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { allowNavigation } from "@/lib/exitIntent";
+import { allowNavigation } from "@/lib/funnelManager";
 
 const basicPlanFeatures = [
   "117 Páginas De Fármacos Explicados De Forma Objetiva (PDF)",

@@ -15,12 +15,12 @@ import { PainIntensificationSection } from "./sections/PainIntensificationSectio
 import { ValueAnchoringSection } from "./sections/ValueAnchoringSection";
 import { TargetAudienceSection } from "./sections/TargetAudienceSection";
 import { MaterialPreviewSection } from "./sections/MaterialPreviewSection";
-import { initExitIntent } from "@/lib/exitIntent";
+import { initFunnelManager } from "@/lib/funnelManager";
 
 export const Lp = (): JSX.Element => {
 
   useEffect(() => {
-    const cleanup = initExitIntent();
+    const cleanup = initFunnelManager();
     return cleanup;
   }, []);
 

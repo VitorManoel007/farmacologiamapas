@@ -1,0 +1,316 @@
+# IMPLEMENTAÇÃO DO GERENCIADOR DE FUNIL (EXIT INTENT)
+
+Quero implementar um sistema robusto de recuperação de abandono em todo o funil.
+
+## URLs
+
+### Downsell 01
+
+https://vitor-downseel-01-1--emocionaloferta.replit.app/
+
+### Downsell 02
+
+https://vitor-downseel-01--vitorbelezatikt.replit.app/
+
+---
+
+# OBJETIVO
+
+Criar um gerenciador centralizado que controle toda a navegação do funil.
+
+O sistema deve identificar em qual etapa o visitante está e redirecioná-lo corretamente em caso de abandono.
+
+---
+
+# FLUXO
+
+Página Principal
+
+↓
+
+Tentativa de saída
+
+↓
+
+Downsell 01
+
+↓
+
+Tentativa de saída
+
+↓
+
+Downsell 02
+
+↓
+
+Tentativa de saída
+
+↓
+
+Sai normalmente do funil
+
+---
+
+# EVENTOS DE SAÍDA
+
+Detectar abandono utilizando a combinação mais confiável possível entre:
+
+* botão voltar;
+* mudança para outro domínio;
+* clique em links externos;
+* fechamento da aba (quando permitido pelo navegador);
+* pagehide;
+* visibilitychange;
+* popstate;
+* beforeunload (apenas como suporte, respeitando as limitações dos navegadores).
+
+Não depender exclusivamente de um único evento.
+
+---
+
+# CONTROLE DE ESTADO
+
+Utilizar **LocalStorage** para controlar o progresso do visitante.
+
+Criar a chave:
+
+```text
+funnel_step
+```
+
+Valores possíveis:
+
+```text
+main
+ds1
+ds2
+finished
+```
+
+---
+
+# LÓGICA
+
+## Página Principal
+
+Se:
+
+```text
+funnel_step = main
+```
+
+ou não existir
+
+e houver tentativa de abandono
+
+↓
+
+Salvar:
+
+```text
+funnel_step = ds1
+```
+
+↓
+
+Redirecionar para:
+
+https://vitor-downseel-01-1--emocionaloferta.replit.app/
+
+---
+
+## Downsell 01
+
+Se:
+
+```text
+funnel_step = ds1
+```
+
+e houver tentativa de abandono
+
+↓
+
+Salvar:
+
+```text
+funnel_step = ds2
+```
+
+↓
+
+Redirecionar para:
+
+https://vitor-downseel-01--vitorbelezatikt.replit.app/
+
+---
+
+## Downsell 02
+
+Se:
+
+```text
+funnel_step = ds2
+```
+
+e houver tentativa de abandono
+
+↓
+
+Salvar:
+
+```text
+funnel_step = finished
+```
+
+↓
+
+Permitir que o visitante saia normalmente.
+
+Nunca redirecionar novamente.
+
+---
+
+# PROTEÇÃO CONTRA LOOP
+
+Garantir que:
+
+* o visitante nunca volte do Downsell 02 para o Downsell 01;
+* o visitante nunca volte da página principal para o Downsell 01 caso já tenha passado por ele;
+* depois de "finished", nenhum redirect seja executado novamente.
+
+---
+
+# NAVEGAÇÃO PERMITIDA
+
+Criar uma função:
+
+```javascript
+allowNavigation()
+```
+
+Ela deverá ser chamada automaticamente sempre que o visitante clicar em:
+
+* Comprar;
+* Plano Básico;
+* Plano Completo;
+* Checkout;
+* Botões internos permitidos;
+* Links internos do funil.
+
+Quando essa função for executada:
+
+```javascript
+window.allowExit = true;
+```
+
+Assim o sistema nunca confundirá uma compra com abandono.
+
+---
+
+# ORGANIZAÇÃO DO CÓDIGO
+
+Criar um arquivo exclusivo:
+
+```text
+/utils/funnelManager.js
+```
+
+Esse arquivo será responsável por:
+
+* detectar abandono;
+* controlar LocalStorage;
+* controlar os redirects;
+* impedir loops;
+* controlar exceções;
+* liberar navegação normal.
+
+Nenhuma outra página deverá conter lógica duplicada.
+
+---
+
+# CONFIGURAÇÃO
+
+Criar um arquivo:
+
+```text
+/config/funnelConfig.js
+```
+
+Exemplo:
+
+```javascript
+export const FUNNEL = {
+
+main: "/",
+
+downsell1: "https://vitor-downseel-01-1--emocionaloferta.replit.app/",
+
+downsell2: "https://vitor-downseel-01--vitorbelezatikt.replit.app/"
+
+};
+```
+
+Todo o sistema deve consumir essas URLs apenas desse arquivo.
+
+Nunca deixar links fixos espalhados pelo projeto.
+
+---
+
+# PIXEL META
+
+O sistema não pode interferir em nenhum evento existente.
+
+Continuar funcionando normalmente:
+
+* PageView
+* InitiateCheckout
+* Purchase
+
+Os redirects devem preservar o rastreamento.
+
+---
+
+# PERFORMANCE
+
+O sistema deve:
+
+* criar apenas um listener por evento;
+* remover listeners quando necessário;
+* evitar loops;
+* evitar timers desnecessários;
+* evitar polling;
+* utilizar JavaScript moderno (ES6+);
+* ser compatível com Vercel.
+
+---
+
+# COMPATIBILIDADE
+
+Validar funcionamento em:
+
+* Chrome
+* Edge
+* Firefox
+* Safari
+* Android
+* iPhone
+
+Respeitando as limitações dos navegadores para eventos de saída.
+
+---
+
+# IMPORTANTE
+
+Não alterar:
+
+* Layout;
+* Design;
+* Pixel;
+* Checkout;
+* Copy;
+* Estrutura visual;
+* Botões existentes.
+
+O objetivo é apenas implementar um sistema profissional de recuperação de abandono, organizado, escalável e seguro, preservando a experiência do usuário e evitando qualquer tipo de redirecionamento em loop.
