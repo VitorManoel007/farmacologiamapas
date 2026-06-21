@@ -1,0 +1,274 @@
+# AUDITORIA COMPLETA DO FUNIL DE VENDAS
+
+Quero que você faça uma revisão completa do funil e confirme que toda a estrutura está funcionando corretamente antes da publicação.
+
+Não altere o design, apenas valide e corrija eventuais problemas encontrados.
+
+---
+
+# OBJETIVO
+
+Simular a navegação completa de um usuário e verificar se todos os redirecionamentos, eventos e regras do funil estão funcionando corretamente.
+
+---
+
+# ETAPA 01
+
+## Página Principal
+
+Verificar:
+
+* carregamento correto;
+* responsividade;
+* Pixel carregando;
+* cronômetro (caso exista);
+* funcionamento dos botões;
+* velocidade de carregamento.
+
+Depois simular:
+
+Usuário tenta abandonar a página.
+
+Confirmar que:
+
+✅ é redirecionado corretamente para o Downsell 01.
+
+---
+
+# ETAPA 02
+
+## Downsell 01
+
+Verificar:
+
+* carregamento;
+* layout;
+* cronômetro;
+* botão de compra;
+* responsividade;
+* Pixel.
+
+Depois simular:
+
+Usuário tenta abandonar novamente.
+
+Confirmar que:
+
+✅ é redirecionado corretamente para:
+
+https://vitor-downseel-01--vitorbelezatikt.replit.app/
+
+---
+
+# ETAPA 03
+
+## Downsell 02
+
+Verificar:
+
+* carregamento;
+* layout;
+* cronômetro;
+* botão;
+* responsividade;
+* Pixel.
+
+Depois simular:
+
+Usuário tenta abandonar novamente.
+
+Confirmar que:
+
+✅ não existe nenhum outro redirect.
+
+O usuário deve sair normalmente do funil.
+
+---
+
+# TESTAR COMPRAS
+
+Confirmar que:
+
+Quando o usuário clicar em qualquer botão de compra:
+
+* não dispara o Exit Intent;
+* não redireciona para nenhum Downsell;
+* segue normalmente para o Checkout.
+
+---
+
+# TESTAR LOOP
+
+Confirmar que:
+
+Página Principal
+
+↓
+
+DS1
+
+↓
+
+DS2
+
+↓
+
+Sair
+
+Nunca retorna para:
+
+* Página Principal
+* DS1
+
+Nunca entra em loop.
+
+---
+
+# TESTAR LOCALSTORAGE
+
+Verificar:
+
+* criação correta das chaves;
+* atualização correta;
+* remoção quando necessário;
+* ausência de conflitos.
+
+Confirmar que o estado do funil permanece consistente durante toda a navegação.
+
+---
+
+# TESTAR PIXEL META
+
+Confirmar que continuam funcionando normalmente:
+
+* PageView
+* InitiateCheckout
+* Purchase
+
+O sistema de Exit Intent não pode impedir nenhum evento.
+
+---
+
+# TESTAR RESPONSIVIDADE
+
+Validar:
+
+* Android
+* iPhone
+* Tablet
+* Desktop
+
+Sem:
+
+* scroll horizontal;
+* elementos cortados;
+* imagens deformadas;
+* botões fora da tela.
+
+---
+
+# TESTAR PERFORMANCE
+
+Confirmar:
+
+* imagens comprimidas;
+* carregamento rápido;
+* ausência de erros no Console;
+* ausência de erros de JavaScript;
+* ausência de erros de Network.
+
+---
+
+# TESTAR HISTÓRICO
+
+Verificar o botão voltar.
+
+Confirmar que:
+
+* não cria histórico infinito;
+* não prende o usuário;
+* funciona naturalmente.
+
+---
+
+# TESTAR EVENTOS DE SAÍDA
+
+Validar:
+
+* botão voltar;
+* links externos;
+* mudança de domínio;
+* pagehide;
+* visibilitychange;
+* popstate;
+* beforeunload (respeitando as limitações dos navegadores).
+
+Confirmar que o comportamento é consistente em todos os navegadores suportados.
+
+---
+
+# TESTAR CHECKOUT
+
+Garantir que:
+
+* o visitante consiga comprar normalmente;
+* nenhum redirect interfira na compra;
+* nenhuma lógica do funil bloqueie o checkout.
+
+---
+
+# AUDITORIA FINAL
+
+Ao terminar, gerar um relatório contendo:
+
+## Estrutura do Funil
+
+Página Principal
+
+↓
+
+Downsell 01
+
+↓
+
+Downsell 02
+
+↓
+
+Saída
+
+---
+
+## Checklist
+
+✅ Página Principal funcionando
+
+✅ Downsell 01 funcionando
+
+✅ Downsell 02 funcionando
+
+✅ Exit Intent funcionando
+
+✅ Sem loops
+
+✅ LocalStorage funcionando
+
+✅ Pixel funcionando
+
+✅ Checkout funcionando
+
+✅ Responsividade validada
+
+✅ Performance validada
+
+✅ Sem erros de Console
+
+✅ Sem erros de Network
+
+---
+
+# IMPORTANTE
+
+Caso encontre qualquer erro, conflito ou comportamento inesperado, corrija automaticamente seguindo as boas práticas de desenvolvimento.
+
+Somente considere o projeto concluído quando todo o fluxo estiver funcionando de forma estável, sem loops, sem conflitos e pronto para uso em produção.

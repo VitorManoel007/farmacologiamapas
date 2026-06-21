@@ -28,53 +28,38 @@ export function allowNavigation(): void {
 
 // ─── Lógica de redirect ────────────────────────────────────────────────────
 
-function shouldBlock(): boolean {
+/**
+ * A página principal só intercepta quando o visitante ainda está
+ * na etapa "main". Se já passou por ds1/ds2/finished, não redireciona.
+ */
+function shouldRedirect(): boolean {
   if (window.allowExit) return false;
-  const step = getStep();
-  return step === "main" || step === "ds1" || step === "ds2";
+  return getStep() === "main";
 }
 
 function handleExit(): void {
-  if (!shouldBlock()) return;
-
-  const step = getStep();
-
-  if (step === "main") {
-    setStep("ds1");
-    window.allowExit = true;
-    window.location.href = FUNNEL.downsell1;
-    return;
-  }
-
-  if (step === "ds1") {
-    setStep("ds2");
-    window.allowExit = true;
-    window.location.href = FUNNEL.downsell2;
-    return;
-  }
-
-  if (step === "ds2") {
-    setStep("finished");
-  }
+  if (!shouldRedirect()) return;
+  setStep("ds1");
+  window.allowExit = true;
+  window.location.href = FUNNEL.downsell1;
 }
 
 // ─── Init ──────────────────────────────────────────────────────────────────
 
 /**
- * Inicializa o gerenciador de funil.
- * Deve ser chamado uma única vez no mount da página principal.
- * Retorna uma função de cleanup para o useEffect do React.
+ * Inicializa o gerenciador de funil na página principal.
+ * Deve ser chamado uma única vez no mount.
+ * Retorna função de cleanup para o useEffect do React.
  */
 export function initFunnelManager(): () => void {
   const step = getStep();
 
-  // Se já passou por todo o funil, não fazer nada
-  if (step === "finished") return () => {};
+  // Se o visitante já passou pela etapa principal (ou terminou o funil),
+  // não instalar nenhum listener — evita loop se ele voltar via browser.
+  if (step !== "main") return () => {};
 
-  // Garantir que a página principal seja marcada como "main" se ainda não houver step
-  if (!localStorage.getItem(FUNNEL_STEP_KEY)) {
-    setStep("main");
-  }
+  // Garantir que o estado está salvo no localStorage
+  setStep("main");
 
   // ── popstate (botão Voltar) ──────────────────────────────────────────────
   history.pushState(null, "", location.href);
@@ -101,7 +86,7 @@ export function initFunnelManager(): () => void {
   };
   window.addEventListener("pagehide", onPageHide);
 
-  // ── beforeunload (suporte — sem texto personalizado) ──────────────────────
+  // ── beforeunload (suporte geral — sem texto personalizado) ────────────────
   const onBeforeUnload = () => {
     handleExit();
   };
@@ -116,12 +101,12 @@ export function initFunnelManager(): () => void {
     const isExternal =
       href.startsWith("http") && !href.includes(location.hostname);
     const isCakto = href.includes("cakto.com.br");
-    const isDownsell =
+    const isDownsellLink =
       href.includes("emocionaloferta.replit.app") ||
       href.includes("vitorbelezatikt.replit.app");
 
     // Checkout e links internos do funil nunca disparam o redirect
-    if (isCakto || isDownsell) return;
+    if (isCakto || isDownsellLink) return;
 
     if (isExternal) {
       handleExit();
