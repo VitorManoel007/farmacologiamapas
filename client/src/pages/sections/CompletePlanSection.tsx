@@ -67,9 +67,7 @@ export const CompletePlanSection = (): JSX.Element => {
               ))}
             </ul>
             <div className="mt-8 flex flex-col items-center">
-              <p className="[font-family:'Poppins',Helvetica] text-center text-4xl font-semibold leading-tight tracking-[1.33px] text-[#019a01] sm:text-[42px]">
-                R$ 15,90
-              </p>
+              <p className="[font-family:'Poppins',Helvetica] text-center text-4xl font-semibold leading-tight tracking-[1.33px] text-[#019a01] sm:text-[42px]">R$ 15,99</p>
               <p className="mt-2 [font-family:'Poppins',Helvetica] text-center text-sm font-semibold leading-snug tracking-[0.39px] text-[#524949]">
                 ou até 3x de R$ 5,30
               </p>
@@ -150,7 +148,7 @@ export const CompletePlanSection = (): JSX.Element => {
                 <span className="tracking-[0.08px]"> por:</span>
               </p>
               <p className="mt-4 [font-family:'Poppins',Helvetica] text-center text-5xl font-semibold leading-tight tracking-[1.69px] text-[#019a01] sm:text-[52px]">
-                R$ 25,90
+                R$ 25,99
               </p>
               <p className="mt-4 [font-family:'Poppins',Helvetica] text-center text-base font-semibold leading-snug tracking-[0.5px] text-[#524949]">
                 ou até 5x de R$ 5,18
