@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { allowNavigation } from "@/lib/exitIntent";
 
 const basicPlanFeatures = [
   "117 Páginas De Fármacos Explicados De Forma Objetiva (PDF)",
@@ -77,6 +78,7 @@ export const CompletePlanSection = (): JSX.Element => {
               href="https://pay.cakto.com.br/p2cpxzq_905851"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={allowNavigation}
               className="mt-7 flex h-auto min-h-[60px] w-full items-center justify-center whitespace-normal rounded-[10.74px] bg-[#019a01] px-5 py-3 hover:bg-[#018301] no-underline transition-colors"
             >
               <span className="w-full [font-family:'Poppins',Helvetica] text-center text-xl font-semibold leading-snug tracking-[0.67px] text-white">
@@ -170,7 +172,7 @@ export const CompletePlanSection = (): JSX.Element => {
                 href="https://pay.cakto.com.br/f2aq3km_905864"
                 target="_blank"
                 rel="noopener noreferrer"
-
+                onClick={allowNavigation}
                 className="mt-8 flex h-auto min-h-[60px] w-full items-center justify-center whitespace-normal rounded-[10.74px] bg-[#019a01] px-5 py-3 hover:bg-[#018301] no-underline transition-colors"
               >
                 <span className="w-full [font-family:'Poppins',Helvetica] text-center text-xl font-semibold leading-snug tracking-[0.67px] text-white">

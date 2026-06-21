@@ -15,32 +15,13 @@ import { PainIntensificationSection } from "./sections/PainIntensificationSectio
 import { ValueAnchoringSection } from "./sections/ValueAnchoringSection";
 import { TargetAudienceSection } from "./sections/TargetAudienceSection";
 import { MaterialPreviewSection } from "./sections/MaterialPreviewSection";
+import { initExitIntent } from "@/lib/exitIntent";
+
 export const Lp = (): JSX.Element => {
 
   useEffect(() => {
-    // ALTERE O LINK PARA A PÁGINA QUE QUISER MOSTRAR QUANDO O USUÁRIO TENTAR SAIR
-    const link = 'https://meubackredirect.com.br';
-
-    const urlBackRedirect =
-      link.trim() +
-      (link.indexOf('?') > 0 ? '&' : '?') +
-      document.location.search.replace('?', '').toString();
-
-    history.pushState({}, '', location.href);
-    history.pushState({}, '', location.href);
-    history.pushState({}, '', location.href);
-
-    const handler = () => {
-      console.log('onpopstate', urlBackRedirect);
-      setTimeout(() => {
-        location.href = urlBackRedirect;
-      }, 1);
-    };
-
-    window.addEventListener('popstate', handler);
-    return () => {
-      window.removeEventListener('popstate', handler);
-    };
+    const cleanup = initExitIntent();
+    return cleanup;
   }, []);
 
   return (

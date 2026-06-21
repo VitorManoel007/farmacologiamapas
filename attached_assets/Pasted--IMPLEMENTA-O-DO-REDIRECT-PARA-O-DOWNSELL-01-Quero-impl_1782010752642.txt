@@ -1,0 +1,203 @@
+# IMPLEMENTAÇÃO DO REDIRECT PARA O DOWNSELL 01
+
+Quero implementar um sistema robusto de recuperação de abandono.
+
+## URL DO DOWNSELL 01
+
+https://vitor-downseel-01-1--emocionaloferta.replit.app/
+
+---
+
+## OBJETIVO
+
+Quando o usuário tentar abandonar a página principal, ele deve ser redirecionado automaticamente para o Downsell 01.
+
+Porém isso deve acontecer **apenas uma única vez**.
+
+Após visitar o Downsell 01, ele nunca mais deve ser redirecionado novamente durante a mesma sessão.
+
+---
+
+# NÃO REDIRECIONAR
+
+O redirect NÃO pode acontecer quando o usuário:
+
+* clicar em "Quero o Plano Básico";
+* clicar em "Quero o Plano Completo";
+* clicar em qualquer botão que leve ao checkout;
+* navegar normalmente dentro do próprio site;
+* enviar formulários;
+* realizar ações internas da aplicação.
+
+Ou seja, o redirect deve ocorrer apenas quando houver intenção real de abandonar o funil.
+
+---
+
+# QUANDO REDIRECIONAR
+
+Detectar abandono através de:
+
+* fechamento da aba (quando possível);
+* botão voltar;
+* clique em links externos;
+* mudança de domínio;
+* tentativa de sair da página.
+
+Utilizar a combinação mais confiável possível entre:
+
+* visibilitychange
+* pagehide
+* popstate
+* beforeunload (apenas como apoio)
+* SessionStorage
+* LocalStorage
+
+Evitar depender exclusivamente do beforeunload.
+
+---
+
+# CONTROLE DE SESSÃO
+
+Criar uma chave:
+
+sessionStorage
+
+downsell01Visited = true
+
+Quando o usuário for enviado ao Downsell 01.
+
+Se essa chave existir:
+
+NÃO redirecionar novamente.
+
+---
+
+# PROTEÇÃO CONTRA LOOP
+
+Se o usuário já visitou:
+
+https://vitor-downseel-01-1--emocionaloferta.replit.app/
+
+Nunca mais executar o redirect.
+
+Mesmo atualizando a página.
+
+---
+
+# EXCEÇÕES
+
+Criar uma função:
+
+allowNavigation()
+
+Essa função deve ser chamada automaticamente antes de qualquer botão que leve ao checkout.
+
+Ela deve definir:
+
+window.allowExit = true
+
+Assim o redirect nunca dispara durante uma compra.
+
+---
+
+# FLUXO
+
+Página Principal
+
+↓
+
+Usuário tenta abandonar
+
+↓
+
+Verificar:
+
+allowExit == false
+
+↓
+
+Verificar:
+
+downsell01Visited == false
+
+↓
+
+Redirecionar para:
+
+https://vitor-downseel-01-1--emocionaloferta.replit.app/
+
+↓
+
+Salvar
+
+downsell01Visited = true
+
+↓
+
+Nunca mais redirecionar novamente.
+
+---
+
+# CÓDIGO
+
+Criar um arquivo separado:
+
+exitIntent.js
+
+Todo o sistema deve ficar isolado nesse arquivo.
+
+Na página principal apenas importar:
+
+exitIntent.js
+
+---
+
+# BOAS PRÁTICAS
+
+Não utilizar polling.
+
+Não criar timers infinitos.
+
+Não criar múltiplos listeners.
+
+Remover listeners quando necessário.
+
+Evitar vazamentos de memória.
+
+Utilizar JavaScript moderno (ES6+).
+
+Comentar todo o código.
+
+Organizar em funções pequenas.
+
+---
+
+# COMPATIBILIDADE
+
+Garantir funcionamento em:
+
+Chrome
+
+Edge
+
+Firefox
+
+Safari
+
+Android
+
+iPhone
+
+---
+
+# IMPORTANTE
+
+A experiência do usuário deve permanecer natural.
+
+Nunca impedir que ele feche a página.
+
+Nunca criar loops.
+
+Nunca quebrar o histórico do navegador.
+
+Apenas oferecer uma única oportunidade de visualizar o Downsell 01 antes que ele abandone o funil definitivamente.
