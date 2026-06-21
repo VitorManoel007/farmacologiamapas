@@ -1,0 +1,131 @@
+# IMPLEMENTAÇÃO DO REDIRECT PARA O DOWNSELL 02
+
+O Downsell 01 já está funcionando corretamente.
+
+Agora preciso implementar apenas a segunda etapa do funil.
+
+## URL DO DOWNSELL 02
+
+https://vitor-downseel-01--vitorbelezatikt.replit.app/
+
+---
+
+## OBJETIVO
+
+Quando o visitante estiver no **Downsell 01** e tentar abandonar essa página, ele deverá ser redirecionado automaticamente para o **Downsell 02**.
+
+Depois de visitar o Downsell 02, nenhum outro redirecionamento deve acontecer.
+
+---
+
+# EVENTOS DE SAÍDA
+
+Detectar tentativa de abandono utilizando a combinação mais confiável possível entre:
+
+* botão voltar;
+* clique em links externos;
+* mudança para outro domínio;
+* pagehide;
+* visibilitychange;
+* popstate;
+* beforeunload (apenas como suporte, respeitando as limitações do navegador).
+
+Não depender exclusivamente de um único evento.
+
+---
+
+# CONTROLE
+
+Utilizar LocalStorage.
+
+Criar uma chave:
+
+```javascript
+funnel_step
+```
+
+Quando o usuário entrar no Downsell 01:
+
+```javascript
+funnel_step = "ds1"
+```
+
+Quando houver tentativa de saída:
+
+Alterar para:
+
+```javascript
+funnel_step = "ds2"
+```
+
+Em seguida redirecionar para:
+
+https://vitor-downseel-01--vitorbelezatikt.replit.app/
+
+---
+
+# PROTEÇÃO CONTRA LOOP
+
+Se:
+
+```javascript
+funnel_step === "ds2"
+```
+
+Nunca executar novo redirecionamento.
+
+O usuário deve conseguir sair normalmente do site.
+
+---
+
+# EXCEÇÕES
+
+Não executar redirect quando o visitante:
+
+* clicar no botão de compra;
+* iniciar checkout;
+* clicar em qualquer botão permitido da página.
+
+Criar uma função:
+
+```javascript
+allowNavigation()
+```
+
+Essa função deverá definir:
+
+```javascript
+window.allowExit = true;
+```
+
+Assim o sistema não confundirá uma compra com abandono.
+
+---
+
+# ORGANIZAÇÃO
+
+Não modificar a lógica existente do Downsell 01.
+
+Apenas acrescentar a lógica necessária para enviar ao Downsell 02 quando houver abandono.
+
+Evitar duplicação de código.
+
+Utilizar JavaScript moderno (ES6+).
+
+Comentar as principais funções.
+
+---
+
+# IMPORTANTE
+
+Não alterar:
+
+* Layout;
+* Copy;
+* Design;
+* Pixel da Meta;
+* Cronômetro;
+* Responsividade;
+* Estrutura da página.
+
+O objetivo é apenas adicionar a segunda etapa do funil de recuperação, mantendo a experiência do usuário fluida e evitando qualquer possibilidade de loop.
